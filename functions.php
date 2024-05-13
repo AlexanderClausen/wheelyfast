@@ -5,7 +5,7 @@
         die('Connection failed: ' . $conn->connect_error);
     }
 
-    function getCarsList($start_date, $end_date, $exclude_booked = false, $search = '') {
+    function getCarsList($start_date, $end_date, $exclude_booked = false, $search = '', $nav_key = '', $nav_value = '') {
         $cars = json_decode(file_get_contents('cars.json'));
 
         global $conn;
@@ -52,6 +52,29 @@
                 });
             }
 
+            // Filter out cars that do not match the navigation menu
+            if ($nav_key != '' && $nav_value != '') {
+                $cars = array_filter($cars, function($car) use ($nav_key, $nav_value) {
+                    return $car->$nav_key == $nav_value;
+                });
+            }
+
             return $cars;
+        }
+    }
+
+    function getNav($key) {
+        // Read the contents of cars.json
+        $carsData = file_get_contents('cars.json');
+
+        // Decode the JSON data into an associative array
+        $cars = json_decode($carsData, true);
+
+        // Get all the unique values from the cars array
+        $values = array_unique(array_column($cars, $key));
+
+        // Display the unique classes in the navigation menu
+        foreach ($values as $value) {
+            echo '<li class="nav-link" data-key="' . $key . '">' . $value . '</li>';
         }
     }
