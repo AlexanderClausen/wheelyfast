@@ -63,6 +63,27 @@
         }
     }
 
+    function checkCarBooked($id) {
+        global $conn;
+        $sql = "SELECT * FROM orders WHERE car_id = $id AND status NOT IN ('cancelled', 'returned')";
+        $result = $conn->query($sql);
+        return $result->num_rows > 0;
+    }
+
+    function getCarDetails($id) {
+        $cars = json_decode(file_get_contents('cars.json'));
+
+        foreach ($cars as $car) {
+            if ($car->id == $id) {
+                $car->booked = checkCarBooked($id);
+                $car->name = $car->make . ' ' . $car->model;
+                return $car;
+            }
+        }
+
+        return null;
+    }
+
     function getNav($key) {
         // Read the contents of cars.json
         $carsData = file_get_contents('cars.json');

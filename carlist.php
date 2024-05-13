@@ -50,7 +50,7 @@ if ($exclude_unavailable) {
 foreach ($cars as $car) {
     echo '<div class="car">';
     // echo '<img src="data/' . $car->image . '" alt="' . $car->name . '">';
-    echo '<h3>' . $car->name . ' (ID #' . $car->id . ')</h3>';
+    echo '<h3 class="detail-link" data-id="' . $car->id . '">' . $car->name . ' (ID #' . $car->id . ')</h3>';
     // echo '<p>' . $car->year . '</p>';
     echo '<p>$' . number_format($car->price, 2) . '/day</p>';
     echo '<p>' . ($car->booked ? 'Unavailable' : 'Available') . '</p>';

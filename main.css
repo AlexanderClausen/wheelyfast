@@ -1,3 +1,98 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #fff;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    white-space: nowrap;
+    width: auto;
+    /* max-width: 100%; */
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.container {
+    display: flex;
+    margin: 0;
+}
+
+#car-list {
+    flex: 1;
+    /* border: 1px solid black; */
+}
+
+#car-details {
+    flex: 1;
+    /* border: 1px solid black; */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav > ul > li {
+    display: inline-block;
+    position: relative;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+
+nav ul li:hover > ul {
+    display: block;
+    background-color: white;
+}
+
+nav ul ul li:hover {
+    background-color: lightgray;
+}
+
+.true span {
+    color: black;
+}
+
+.false span {
+    color: lightgray;
+}
+
+#car-image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+#car-availability {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    width: auto;
+    font-weight: bold;
+}
+
+.available {
+    background-color: #d6ffd6;
+    color: darkgreen;
+}
+
+.unavailable {
+    background-color: #e7e7e7;
+    color: gray;
+}

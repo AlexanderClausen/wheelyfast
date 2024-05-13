@@ -6,7 +6,7 @@
         "make": "Hyundai",
         "model": "Tucson",
         "year": 2022,
-        "image": "hyundai_tucson.jpg",
+        "image": "hyundai_tucson.webp",
         "mileage": 10000,
         "fuel": "Petrol",
         "transmission": "Automatic",
@@ -15,13 +15,14 @@
         "quantity": 3,
         "price": 70,
         "description": "",
-        "aircon": true,
-        "bluetooth": true,
-        "carplay": true,
-        "androidauto": true,
-        "gps": true,
-        "parkingassistant": true,
-        "cruisecontrol": true
+        "features": {
+            "aircon": true,
+            "bluetooth": true,
+            "carplay": true,
+            "androidauto": true,
+            "gps": true,
+            "parkingassistant": true,
+            "cruisecontrol": true}
     },
     {
         "id": 1,
@@ -30,7 +31,7 @@
         "make": "Tesla",
         "model": "Model S",
         "year": 2024,
-        "image": "tesla_model_s.jpg",
+        "image": "tesla_model_s.webp",
         "mileage": 0,
         "fuel": "Electric",
         "transmission": "Automatic",
@@ -39,13 +40,14 @@
         "quantity": 1,
         "price": 90,
         "description": "",
-        "aircon": true,
-        "bluetooth": true,
-        "carplay": false,
-        "androidauto": false,
-        "gps": true,
-        "parkingassistant": true,
-        "cruisecontrol": true
+        "features": {
+            "aircon": true,
+            "bluetooth": true,
+            "carplay": false,
+            "androidauto": false,
+            "gps": true,
+            "parkingassistant": true,
+            "cruisecontrol": true}
     },
     {
         "id": 2,
@@ -54,7 +56,7 @@
         "make": "Tesla",
         "model": "Model Y",
         "year": 2021,
-        "image": "tesla_model_y.jpg",
+        "image": "tesla_model_y.webp",
         "mileage": 0,
         "fuel": "Electric",
         "transmission": "Automatic",
@@ -63,13 +65,14 @@
         "quantity": 2,
         "price": 80,
         "description": "",
-        "aircon": true,
-        "bluetooth": true,
-        "carplay": false,
-        "androidauto": false,
-        "gps": true,
-        "parkingassistant": true,
-        "cruisecontrol": true
+        "features": {
+            "aircon": true,
+            "bluetooth": true,
+            "carplay": false,
+            "androidauto": false,
+            "gps": true,
+            "parkingassistant": true,
+            "cruisecontrol": true}
     },
     {
         "id": 3,
@@ -78,7 +81,7 @@
         "make": "Suzuki",
         "model": "Swift",
         "year": 2018,
-        "image": "suzuki_swift.jpg",
+        "image": "suzuki_swift.webp",
         "mileage": 300,
         "fuel": "Petrol",
         "transmission": "Automatic",
@@ -87,12 +90,13 @@
         "quantity": 2,
         "price": 30,
         "description": "",
-        "aircon": true,
-        "bluetooth": true,
-        "carplay": false,
-        "androidauto": false,
-        "gps": false,
-        "parkingassistant": false,
-        "cruisecontrol": true
+        "features": {
+            "aircon": true,
+            "bluetooth": true,
+            "carplay": false,
+            "androidauto": false,
+            "gps": false,
+            "parkingassistant": false,
+            "cruisecontrol": true}
     }
 ]

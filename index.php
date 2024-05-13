@@ -26,15 +26,15 @@ include 'functions.php';
                 <li class="nav-link" data-key="">Show all</li>
                 <li>
                     Class
-                    <ol><?php getNav("class") ?></ol>
+                    <ul><?php getNav("class") ?></ul>
                 </li>
                 <li>
                     Type
-                    <ol><?php getNav("type") ?></ol>
+                    <ul><?php getNav("type") ?></ul>
                 </li>
                 <li>
                     Make
-                    <ol><?php getNav("make") ?></ol>
+                    <ul><?php getNav("make") ?></ul>
                 </li>
             </ul>
         </nav>
@@ -53,8 +53,10 @@ include 'functions.php';
         </form>
     </header>
     <main>
-        <section>
+        <section class="container">
             <div id="car-list">
+            </div>
+            <div id="car-details">
             </div>
         </section>
     </main>
@@ -81,8 +83,21 @@ include 'functions.php';
                 });
             }
 
-            // Initial car list load
+            // Function to load car details
+            function loadCarDetails(carId) {
+                $.ajax({
+                    type: 'GET',
+                    url: 'cardetails.php',
+                    data: { id: carId },
+                    success: function(data) {
+                        $('#car-details').html(data);
+                    }
+                });
+            }
+
+            // Initial loads
             loadCarList();
+            loadCarDetails('');
 
             // Reload car list when user clicks out of a form field
             $('#selector').find('input').on('blur', function() {
@@ -114,6 +129,13 @@ include 'functions.php';
                     e.preventDefault();
                     loadCarList();
                 }
+            });
+
+            // Car details
+            $('#car-list').on('click', '.detail-link', function() {
+                var carId = $(this).data('id');
+                console.log('Selected car with id ' + carId)
+                loadCarDetails(carId);
             });
 
             // Autocomplete search bar
