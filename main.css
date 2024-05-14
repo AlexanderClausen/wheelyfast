@@ -1,5 +1,27 @@
+/* Material Icons */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    src: url(./fonts/MaterialSymbolsOutlined.woff2) format('woff');
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+/* Styling */
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .tooltip {
@@ -30,13 +52,50 @@ body {
     margin: 0;
 }
 
+.flex {
+    flex: 1;
+}
+
+.list-properties {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.list-property-icon {
+    margin-right: 5px;
+    color: #007DFC;
+}
+
+.list-property, .car-chips {
+    display: flex;
+    align-items: center;
+}
+
 #car-list {
     flex: 1;
+    background-color: whitesmoke;
+    /* background-color: #d6d8da; */
     /* border: 1px solid black; */
 }
 
+.car {
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0 10px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.car:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
 #car-details {
-    flex: 1;
+    flex: 2;
+    margin: 0 10px;
     /* border: 1px solid black; */
 }
 
@@ -78,9 +137,10 @@ nav ul ul li:hover {
     border-radius: 10px;
 }
 
-#car-availability {
+.chip {
     display: inline-block;
     padding: 5px 10px;
+    margin-right: 5px;
     border-radius: 20px;
     font-size: 12px;
     width: auto;
@@ -90,9 +150,17 @@ nav ul ul li:hover {
 .available {
     background-color: #d6ffd6;
     color: darkgreen;
+    border: 1px solid #b6dab6;
 }
 
 .unavailable {
-    background-color: #e7e7e7;
-    color: gray;
+    background-color: #ffd6d6;
+    color: darkred;
+    border: 1px solid #dab6b6;
+}
+
+.chip-neutral {
+    background-color: white;
+    color: black;
+    border: 1px solid #b6b8ba;
 }

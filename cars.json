@@ -86,7 +86,7 @@
         "fuel": "Petrol",
         "transmission": "Automatic",
         "seats": 4,
-        "luggage": 1.5,
+        "luggage": 1,
         "quantity": 2,
         "price": 30,
         "description": "",

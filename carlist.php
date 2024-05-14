@@ -48,12 +48,23 @@ if ($exclude_unavailable) {
 // echo '</details>';
 
 foreach ($cars as $car) {
-    echo '<div class="car">';
-    // echo '<img src="data/' . $car->image . '" alt="' . $car->name . '">';
-    echo '<h3 class="detail-link" data-id="' . $car->id . '">' . $car->name . ' (ID #' . $car->id . ')</h3>';
-    // echo '<p>' . $car->year . '</p>';
-    echo '<p>$' . number_format($car->price, 2) . '/day</p>';
-    echo '<p>' . ($car->booked ? 'Unavailable' : 'Available') . '</p>';
-    // echo '<button>Book</button>';
+    echo '<div class="car detail-link" data-id="' . $car->id . '">';
+        echo '<div class="car-chips">';
+            echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
+            echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
+            echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
+        echo '</div>';
+        echo '<img id="car-image" src="./images/' . $car->image . '" alt="' . $car->name . '">';
+        echo '<p id="car-make">' . $car->make . '</p>';
+        echo '<p id="car-model">' . $car->model . ' (' . $car->year . ')</p>';
+        echo '<p>$' . number_format($car->price, 2) . '/day</p>';
+        echo '<p>' . ($car->booked ? 'Unavailable' : 'Available') . '</p>';
+        echo '<div class="list-properties">';
+            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
+            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
+            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
+            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';
+            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">luggage</span><p class="list-property-text">' . $car->luggage . '</p></div>';
+        echo '</div>';
     echo '</div>';
 }
