@@ -29,6 +29,20 @@ h1 {
     margin: 10px 0;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.right-align, .right-align span, .right-align p {
+    text-align: right;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid #d6d8da;
+}
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -83,12 +97,14 @@ h1 {
 .list-properties {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
+    /* justify-content: space-between; */
 }
 
 .list-property-icon {
-    margin-right: 5px;
+    margin-right: 3px;
     color: #007DFC;
+    font-size: 18px;
 }
 
 .list-property-text {
@@ -98,9 +114,14 @@ h1 {
     margin: 0;
 }
 
-.list-property, .car-chips {
+.list-property/*, .car-chips*/ {
     display: flex;
     align-items: center;
+    margin-right: 12px;
+}
+
+.list-property:last-of-type {
+    margin-right: unset;
 }
 
 .car {
@@ -129,14 +150,6 @@ h1 {
     color: gray;
     font-weight: bold;
     margin: 0;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.right-align, .right-align span, .right-align p {
-    text-align: right;
 }
 
 .car:hover {

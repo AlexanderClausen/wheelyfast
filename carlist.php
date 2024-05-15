@@ -58,11 +58,12 @@ foreach ($cars as $car) {
         echo '<p id="car-make" class="list-smalltext uppercase bold">' . $car->type . '</p>';
         echo '<div class="container-spacebetween">';
             echo '<p id="car-model" class="list-bigtext">' . $car->name . ' (' . $car->year . ')</p>';
-            echo '<div id="car-price" class="right-align" style="margin: 10px 0;">';
+            echo '<div id="car-price" class="right-align">';
                 echo '<span class="list-bigtext">$' . number_format($car->price, 2) . '</span>';
                 echo '<span class="list-smalltext"> / day</span>';
             echo '</div>';
         echo '</div>';
+        echo '<hr>';
         echo '<div class="list-properties">';
             // echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
             echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
