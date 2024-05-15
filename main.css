@@ -21,7 +21,12 @@
 
 /* Styling */
 body {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+h1 {
+    margin: 10px 0;
 }
 
 .tooltip {
@@ -47,6 +52,12 @@ body {
     visibility: visible;
 }
 
+.container-spacebetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     display: flex;
     margin: 0;
@@ -54,6 +65,19 @@ body {
 
 .flex {
     flex: 1;
+}
+
+#car-list {
+    flex: 1;
+    background-color: whitesmoke;
+    padding: 10px;
+    /* background-color: #d6d8da; */
+    /* border: 1px solid black; */
+}
+
+.results-factor {
+    font-size: 12px;
+    margin: 0;
 }
 
 .list-properties {
@@ -67,25 +91,52 @@ body {
     color: #007DFC;
 }
 
+.list-property-text {
+    font-size: 12px;
+    color: #383838;
+    /* font-weight: bold; */
+    margin: 0;
+}
+
 .list-property, .car-chips {
     display: flex;
     align-items: center;
-}
-
-#car-list {
-    flex: 1;
-    background-color: whitesmoke;
-    /* background-color: #d6d8da; */
-    /* border: 1px solid black; */
 }
 
 .car {
     background-color: white;
     border: 1px solid lightgray;
     border-radius: 10px;
-    margin: 10px;
-    padding: 0 10px;
+    padding: 10px;
+    margin: 10px 0;
     transition: box-shadow 0.3s ease-in-out;
+}
+
+.car-image-preview {
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0 10px 0;
+}
+
+.list-bigtext {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.list-smalltext {
+    font-size: 12px;
+    color: gray;
+    font-weight: bold;
+    margin: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.right-align, .right-align span, .right-align p {
+    text-align: right;
 }
 
 .car:hover {
@@ -140,7 +191,7 @@ nav ul ul li:hover {
 .chip {
     display: inline-block;
     padding: 5px 10px;
-    margin-right: 5px;
+    margin: 0 5px 0 0;
     border-radius: 20px;
     font-size: 12px;
     width: auto;

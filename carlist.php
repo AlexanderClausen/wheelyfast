@@ -14,21 +14,21 @@ $cars_length = count($cars);
 echo '<h1>Available cars (' . $cars_length . ' results)</h1>';
 
 if ($_GET['search'] != '') {
-    echo '<p>&#8594; Searching for "' . $_GET['search'] . '"</p>';
+    echo '<p class="results-factor">&#8594; Searching for "' . $_GET['search'] . '"</p>';
 }
 
 if ($_GET['nav-key'] != '' && $_GET['nav-value'] != '') {
-    echo '<p>&#8594; Filtering by ' . $_GET['nav-key'] . ': ' . $_GET['nav-value'] . '</p>';
+    echo '<p class="results-factor">&#8594; Filtering by ' . $_GET['nav-key'] . ': ' . $_GET['nav-value'] . '</p>';
 }
 
 if ($number_days > 1) {
-    echo '<p>&#8594; ' . $number_days . ' calendar days from '. date_format($start_date, 'd M Y') . ' to ' . date_format($end_date, 'd M Y') . '</p>';
+    echo '<p class="results-factor">&#8594; ' . $number_days . ' calendar days from '. date_format($start_date, 'd M Y') . ' to ' . date_format($end_date, 'd M Y') . '</p>';
 } elseif ($number_days == 1) {
-    echo '<p>&#8594; 1 calendar day on ' . date_format($start_date, 'd M Y') . '</p>';
+    echo '<p class="results-factor">&#8594; 1 calendar day on ' . date_format($start_date, 'd M Y') . '</p>';
 }
 
 if ($exclude_unavailable) {
-    echo '<p>&#8594; Excluding unavailable cars</p>';
+    echo '<p class="results-factor">&#8594; Excluding unavailable cars</p>';
 }
 
 // // DEBUG: Output raw car list
@@ -54,13 +54,17 @@ foreach ($cars as $car) {
             echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
             echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
         echo '</div>';
-        echo '<img id="car-image" src="./images/' . $car->image . '" alt="' . $car->name . '">';
-        echo '<p id="car-make">' . $car->make . '</p>';
-        echo '<p id="car-model">' . $car->model . ' (' . $car->year . ')</p>';
-        echo '<p>$' . number_format($car->price, 2) . '/day</p>';
-        echo '<p>' . ($car->booked ? 'Unavailable' : 'Available') . '</p>';
+        echo '<img class="car-image-preview" src="./images/' . $car->image . '" alt="' . $car->name . '">';
+        echo '<p id="car-make" class="list-smalltext uppercase bold">' . $car->type . '</p>';
+        echo '<div class="container-spacebetween">';
+            echo '<p id="car-model" class="list-bigtext">' . $car->name . ' (' . $car->year . ')</p>';
+            echo '<div id="car-price" class="right-align" style="margin: 10px 0;">';
+                echo '<span class="list-bigtext">$' . number_format($car->price, 2) . '</span>';
+                echo '<span class="list-smalltext"> / day</span>';
+            echo '</div>';
+        echo '</div>';
         echo '<div class="list-properties">';
-            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
+            // echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
             echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
             echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
             echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';
