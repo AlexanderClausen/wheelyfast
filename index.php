@@ -20,24 +20,6 @@ include 'functions.php';
     <header>
         <a id="top-bar-logo" class="logo" href="./">Wheely Fast</a>
 
-        <nav>
-            <ul>
-                <li class="nav-link" data-key="">Show all</li>
-                <li>
-                    Class
-                    <ul><?php getNav("class") ?></ul>
-                </li>
-                <li>
-                    Type
-                    <ul><?php getNav("type") ?></ul>
-                </li>
-                <li>
-                    Make
-                    <ul><?php getNav("make") ?></ul>
-                </li>
-            </ul>
-        </nav>
-
         <!-- Start and end date selector and search bar-->
         <form id="selector" action="carlist.php" method="get">
             <input type="text" id="search-bar" name="search" placeholder="Search for a car">
@@ -51,7 +33,31 @@ include 'functions.php';
             <input type="hidden" name="nav-value" value="">
         </form>
     </header>
-    <main>
+    <nav id="sidenav" class="sidenav">
+    <span id="nav-hamburger" class="material-symbols-outlined">menu</span>
+        <ul>
+            <li>
+                <span class="material-symbols-outlined nav-icon">view_list</span>
+                <span class="nav-text nav-link" data-key="">Show all</span>
+            </li>
+            <li>
+                <span class="material-symbols-outlined nav-icon">straighten</span>
+                <span class="nav-text">Class</span>
+                <ul><?php getNav("class") ?></ul>
+            </li>
+            <li>
+                <span class="material-symbols-outlined nav-icon">directions_car</span>
+                <span class="nav-text">Type</span>
+                <ul><?php getNav("type") ?></ul>
+            </li>
+            <li>
+                <span class="material-symbols-outlined nav-icon">brand_awareness</span>
+                <span class="nav-text">Make</span>
+                <ul><?php getNav("make") ?></ul>
+            </li>
+        </ul>
+    </nav>
+    <main id="main">
         <section class="container">
             <div id="car-list">
             </div>

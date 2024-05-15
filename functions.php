@@ -96,6 +96,6 @@
 
         // Display the unique classes in the navigation menu
         foreach ($values as $value) {
-            echo '<li class="nav-link" data-key="' . $key . '">' . $value . '</li>';
+            echo '<li class="nav-link sub-item" data-key="' . $key . '"><span class="nav-text">' . $value . '</span></li>';
         }
     }

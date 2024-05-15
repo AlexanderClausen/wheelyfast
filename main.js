@@ -7,6 +7,19 @@ $(document).ready(function() {
         loadCarList();
     });
 
+    // Functions to open and close side navigation
+    function openNav() {
+        document.getElementById("sidenav").style.width = "250px";
+        document.getElementById("sidenav").classList.add("open")
+        document.getElementById("main").style.marginLeft = "250px";
+    }
+    
+    function closeNav() {
+        document.getElementById("sidenav").style.width = "60px";
+        document.getElementById("sidenav").classList.remove("open")
+        document.getElementById("main").style.marginLeft= "60px";
+    }
+
     // Function to load car list
     function loadCarList() {
         var formData = $('#selector').serialize();
@@ -36,6 +49,7 @@ $(document).ready(function() {
     // Initial loads
     loadCarList();
     loadCarDetails('');
+    openNav();
 
     // Reload car list when user clicks out of a form field
     $('#selector').find('input').on('blur', function() {
@@ -92,5 +106,14 @@ $(document).ready(function() {
                 console.log('AJAX error:', textStatus, errorThrown);
             }
         });
+    });
+
+    // Side navigation
+    $('#nav-hamburger').on('click', function() {
+        if ($('#sidenav').hasClass('open')) {
+            closeNav();
+        } else {
+            openNav();
+        }
     });
 });
