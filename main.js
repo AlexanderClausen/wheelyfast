@@ -18,6 +18,7 @@ $(document).ready(function() {
         document.getElementById("sidenav").style.width = "60px";
         document.getElementById("sidenav").classList.remove("open")
         document.getElementById("main").style.marginLeft= "60px";
+        $('.parent-item').removeClass('open');
     }
 
     // Function to load car list
@@ -49,7 +50,7 @@ $(document).ready(function() {
     // Initial loads
     loadCarList();
     loadCarDetails('');
-    openNav();
+    closeNav();
 
     // Reload car list when user clicks out of a form field
     $('#selector').find('input').on('blur', function() {
@@ -114,6 +115,17 @@ $(document).ready(function() {
             closeNav();
         } else {
             openNav();
+        }
+    });
+
+    $('.parent-item').on('click', function() {
+        if (!$('#sidenav').hasClass('open')) {
+            openNav();
+        }
+        if ($(this).hasClass('open')) {
+            $(this).removeClass('open');
+        } else {
+            $(this).addClass('open');
         }
     });
 });

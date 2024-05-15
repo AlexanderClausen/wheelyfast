@@ -34,28 +34,7 @@ include 'functions.php';
         </form>
     </header>
     <nav id="sidenav" class="sidenav">
-    <span id="nav-hamburger" class="material-symbols-outlined">menu</span>
-        <ul>
-            <li>
-                <span class="material-symbols-outlined nav-icon">view_list</span>
-                <span class="nav-text nav-link" data-key="">Show all</span>
-            </li>
-            <li>
-                <span class="material-symbols-outlined nav-icon">straighten</span>
-                <span class="nav-text">Class</span>
-                <ul><?php getNav("class") ?></ul>
-            </li>
-            <li>
-                <span class="material-symbols-outlined nav-icon">directions_car</span>
-                <span class="nav-text">Type</span>
-                <ul><?php getNav("type") ?></ul>
-            </li>
-            <li>
-                <span class="material-symbols-outlined nav-icon">brand_awareness</span>
-                <span class="nav-text">Make</span>
-                <ul><?php getNav("make") ?></ul>
-            </li>
-        </ul>
+        <?php include 'nav.php'; ?>
     </nav>
     <main id="main">
         <section class="container">
