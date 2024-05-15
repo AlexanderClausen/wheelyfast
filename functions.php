@@ -63,19 +63,19 @@
         }
     }
 
-    function checkCarBooked($id) {
+    function checkCarBooked($id, $start_date, $end_date) {
         global $conn;
-        $sql = "SELECT * FROM orders WHERE car_id = $id AND status NOT IN ('cancelled', 'returned')";
+        $sql = "SELECT * FROM orders WHERE car_id = $id AND status NOT IN ('cancelled', 'returned') AND ((start_date BETWEEN '$start_date' AND '$end_date') OR (end_date BETWEEN '$start_date' AND '$end_date'))";
         $result = $conn->query($sql);
         return $result->num_rows > 0;
     }
 
-    function getCarDetails($id) {
+    function getCarDetails($id, $start_date, $end_date) {
         $cars = json_decode(file_get_contents('cars.json'));
 
         foreach ($cars as $car) {
             if ($car->id == $id) {
-                $car->booked = checkCarBooked($id);
+                $car->booked = checkCarBooked($id, $start_date, $end_date);
                 $car->name = $car->make . ' ' . $car->model;
                 return $car;
             }

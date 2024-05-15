@@ -13,7 +13,7 @@ if ($_GET['id'] == '') {
 } else {
     include 'functions.php';
 
-    $car = getCarDetails($_GET['id']);
+    $car = getCarDetails($_GET['id'], $_GET['start_date'], $_GET['end_date']);
 
     echo '<div class="car-details">';
         echo '<img id="car-image" src="./images/' . $car->image . '" alt="' . $car->name . '">';
