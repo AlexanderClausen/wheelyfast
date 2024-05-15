@@ -12,12 +12,14 @@ $(document).ready(function() {
         document.getElementById("sidenav").style.width = "250px";
         document.getElementById("sidenav").classList.add("open")
         document.getElementById("main").style.marginLeft = "250px";
+        document.getElementById("header").style.marginLeft = "250px";
     }
     
     function closeNav() {
         document.getElementById("sidenav").style.width = "60px";
         document.getElementById("sidenav").classList.remove("open")
         document.getElementById("main").style.marginLeft= "60px";
+        document.getElementById("header").style.marginLeft = "60px";
         $('.parent-item').removeClass('open');
     }
 
@@ -119,13 +121,16 @@ $(document).ready(function() {
     });
 
     $('.parent-item').on('click', function() {
-        if (!$('#sidenav').hasClass('open')) {
-            openNav();
-        }
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
         } else {
             $(this).addClass('open');
+        }
+    });
+
+    $('.nav-icon').on('click', function() {
+        if (!$('#sidenav').hasClass('open')) {
+            openNav();
         }
     });
 });

@@ -47,6 +47,10 @@ h1 {
     text-transform: uppercase;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .right-align, .right-align span, .right-align p {
     text-align: right;
 }
@@ -62,23 +66,23 @@ hr {
     display: inline-block;
 }
 
-.tooltip .tooltiptext {
-    visibility: hidden;
-    background-color: rgba(0, 0, 0, 0.85);
-    color: #fff;
-    text-align: center;
-    padding: 5px 10px;
-    border-radius: 6px;
-    position: absolute;
-    z-index: 1;
-    white-space: nowrap;
-    width: auto;
-    /* max-width: 100%; */
-}
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        width: auto;
+        /* max-width: 100%; */
+    }
 
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-}
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
 
 .container-spacebetween {
     display: flex;
@@ -162,7 +166,7 @@ hr {
 .list-smalltext {
     font-size: 12px;
     color: gray;
-    font-weight: bold;
+    /* font-weight: bold; */
     margin: 0;
 }
 
@@ -177,13 +181,74 @@ hr {
     /* border: 1px solid black; */
 }
 
+/* Header */
+header {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    /* padding: 10px; */
+    display: flex;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    margin-left: 60;
+    z-index: 1;
+}
+
+header #logo-div {
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-bottom: 1px solid var(--border-color);
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header #top-bar-logo {
+    font-size: 300%;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+header #top-bar-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Hamburger button */
+#hamburger-div {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+#nav-hamburger:hover {
+    cursor: pointer;
+}
+
+#nav-hamburger {
+    font-weight: bold;
+    /* color: var(--primary-color); */
+}
+
+#nav-hamburger, .sidenav .nav-icon {
+    width: 60px;
+    text-align: center;
+}
 
 /* Side navigation bar */
 .sidenav {
     height: 100%;
     width: 60px;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
     background-color: var(--neutral-color);
@@ -191,7 +256,7 @@ hr {
     border-right: 1px solid var(--border-color);
     overflow-x: hidden;
     /* transition: 0.5s; */
-    padding-top: 60px;
+    /* padding-top: 60px; */
 }
 
 #main {
@@ -239,16 +304,6 @@ hr {
     cursor: pointer;
 }
 
-.sidenav #nav-hamburger:hover {
-    cursor: pointer;
-}
-
-.sidenav #nav-hamburger, .sidenav .nav-icon {
-    width: 60px;
-    text-align: center;
-    color: var(--primary-color);
-}
-
 .sidenav .main-item {
     display: flex;
     align-items: center;
@@ -281,8 +336,40 @@ hr {
     padding: 5px 0 5px 60px;
 }
 
+/* Selector form */
+#selector {
+    margin: 15px 0;
+}
+
+#selector tr {
+    height: 24px;
+}
+
+#selector td:first-child {
+    min-height: 60px;
+    width: 60px;
+}
+
+#selector td:last-child {
+    display: flex;
+}
+
+#selector label {
+    width: 50px;
+    /* text-align: right; */
+    margin-right: 5px;
+}
+
+#selector input {
+    flex-grow: 1;
+    height: 24px;
+    padding: 0 5px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
 
 
+/* Rest */
 .true span {
     color: black;
 }

@@ -17,21 +17,12 @@ include 'functions.php';
     <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-sw0iNNXmOJbQhYFuC9OF2kOlD5KQKe1y5lfBn4C9Sjg=" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <a id="top-bar-logo" class="logo" href="./">Wheely Fast</a>
-
-        <!-- Start and end date selector and search bar-->
-        <form id="selector" action="carlist.php" method="get">
-            <input type="text" id="search-bar" name="search" placeholder="Search for a car">
-            <label for="start-date">Start Date</label>
-            <input type="date" id="start-date" name="start-date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required>
-            <label for="end-date">End Date</label>
-            <input type="date" id="end-date" name="end-date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" min="<?php echo date('Y-m-d'); ?>" required>
-            <label for="exclude-unavailable">Exclude unavailable cars</label>
-            <input type="checkbox" id="exclude-unavailable" name="exclude-unavailable">
-            <input type="hidden" name="nav-key" value="">
-            <input type="hidden" name="nav-value" value="">
-        </form>
+    <header id="header">
+        <a href="./" id="logo-div">
+            <!-- <a id="top-bar-logo" class="logo" href="./">Wheely Fast</a> -->
+            <span id="top-bar-logo" class="material-symbols-outlined">speed</span>
+            <span id="top-bar-logo-text">Wheely Fast</span>
+        </a>
     </header>
     <nav id="sidenav" class="sidenav">
         <?php include 'nav.php'; ?>

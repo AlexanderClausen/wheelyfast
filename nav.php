@@ -1,5 +1,40 @@
 <html>
-    <span id="nav-hamburger" class="material-symbols-outlined">menu</span>
+    <div id="hamburger-div">
+        <span id="nav-hamburger" class="material-symbols-outlined">menu</span>
+    </div>
+
+    <form id="selector" action="carlist.php" method="get">
+        <table>
+            <tr>
+                <td><span class="material-symbols-outlined nav-icon">search</span></td>
+                <td><input type="input" id="search-bar" name="search" placeholder="Search for a car"></td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined nav-icon">line_start_diamond</span></td>
+                <td class="selector-item">
+                    <label for="start-date" class="list-smalltext">From:</label>
+                    <input type="date" id="start-date" name="start-date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined nav-icon">line_end_diamond</span></td>
+                <td class="selector-item">
+                    <label for="end-date" class="list-smalltext">To:</label>
+                    <input type="date" id="end-date" name="end-date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" min="<?php echo date('Y-m-d'); ?>" required>
+                </td>
+            </tr>
+            <tr>
+                <td><span class="material-symbols-outlined nav-icon">visibility</span></td>
+                <td class="selector-item">
+                    <label for="exclude-unavailable" class="list-smalltext">Hide Booked:</label>
+                    <input type="checkbox" id="exclude-unavailable" name="exclude-unavailable">
+                </td>
+            </tr>
+        </table>
+        <input type="hidden" name="nav-key" value="">
+        <input type="hidden" name="nav-value" value="">
+    </form>
+
     <ul>
         <li class="nav-link">
             <div class="main-item">
