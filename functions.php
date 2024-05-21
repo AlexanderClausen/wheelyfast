@@ -5,7 +5,7 @@
         die('Connection failed: ' . $conn->connect_error);
     }
 
-    function getCarsList($start_date, $end_date, $exclude_booked = false, $search = '', $nav_key = '', $nav_value = '') {
+    function getCarsList($start_date, $end_date, $exclude_booked = false, $premium_filter = "all", $search = '', $nav_key = '', $nav_value = '') {
         $cars = json_decode(file_get_contents('cars.json'));
 
         global $conn;
@@ -49,6 +49,13 @@
             if ($exclude_booked) {
                 $cars = array_filter($cars, function($car) {
                     return !$car->booked;
+                });
+            }
+
+            // Filter out cars that do not match the premium filter
+            if ($premium_filter != 'all') {
+                $cars = array_filter($cars, function($car) use ($premium_filter) {
+                    return $car->premium == ($premium_filter == 'only');
                 });
             }
 

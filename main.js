@@ -54,7 +54,7 @@ $(document).ready(function() {
     loadCarDetails('');
     openNav();
 
-    // Reload car list when user clicks out of a form field
+    // Reload car list after user interacts with form
     $('#selector').find('input').on('blur', function() {
         if (this.value != this.defaultValue) {
             loadCarList();
@@ -65,7 +65,11 @@ $(document).ready(function() {
         loadCarList();
     });
 
-    // Enforce end date is later than start date
+    $('#selector').find('select').on('change', function() {
+        loadCarList();
+    });
+
+    // Enforce that end date is later than start date
     $('#start-date').on('change', function() {
         $('#end-date').attr('min', this.value);
         if ($('#end-date').val() < this.value) {

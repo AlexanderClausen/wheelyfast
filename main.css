@@ -366,7 +366,7 @@ header #top-bar-logo-text {
     margin-right: 5px;
 }
 
-#selector input {
+#selector input, #selector select {
     flex-grow: 1;
     height: 24px;
     padding: 0 5px;

@@ -4,10 +4,11 @@ include 'functions.php';
 // Set start_date and end_date to today if they are not set
 $start_date = date_create($_GET['start-date'] ?? null);
 $end_date = date_create($_GET['end-date'] ?? null);
-$exclude_unavailable = isset($_GET['exclude-unavailable']) ? true : false;
 $number_days = date_diff($start_date, $end_date)->days + 1;
+$exclude_unavailable = isset($_GET['exclude-unavailable']) ? true : false;
+$premium_filter = $_GET['premium-filter'] ?? 'all';
 
-$cars = getCarsList($start_date, $end_date, $exclude_unavailable, $_GET['search'] ?? '', $_GET['nav-key'] ?? '', $_GET['nav-value'] ?? '');
+$cars = getCarsList($start_date, $end_date, $exclude_unavailable, $premium_filter, $_GET['search'] ?? '', $_GET['nav-key'] ?? '', $_GET['nav-value'] ?? '');
 $cars_length = count($cars);
 
 // Query and results info

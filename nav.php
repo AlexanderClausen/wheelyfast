@@ -23,11 +23,22 @@
                     <input type="date" id="end-date" name="end-date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" min="<?php echo date('Y-m-d'); ?>" required>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <td><span class="material-symbols-outlined nav-icon">visibility</span></td>
                 <td class="selector-item">
                     <label for="exclude-unavailable" class="list-smalltext">Hide Booked:</label>
                     <input type="checkbox" id="exclude-unavailable" name="exclude-unavailable">
+                </td>
+            </tr> -->
+            <tr>
+                <td><span class="material-symbols-outlined nav-icon">star</span></td>
+                <td class="selector-item">
+                    <label for="premium-filter" class="list-smalltext">Premium cars:</label>
+                    <select id="premium-filter" name="premium-filter">
+                        <option value="all">Show all</option>
+                        <option value="only">Only</option>
+                        <option value="exclude">Exclude</option>
+                    </select>
                 </td>
             </tr>
         </table>
