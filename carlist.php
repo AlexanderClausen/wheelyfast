@@ -48,17 +48,27 @@ if ($exclude_unavailable) {
 // echo '</details>';
 
 foreach ($cars as $car) {
+    if (!$car->available) {
+        continue;
+    }
+
     echo '<div class="car detail-link" data-id="' . $car->id . '">';
         echo '<div class="car-chips">';
-            echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
-            echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
             echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
+            // echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
+            if ($car->premium) {
+                echo '<p class="chip chip-premium">Premium</p>';
+            }
+            if ($car->fuel == 'Electric' || $car->fuel == 'Hybrid') {
+                echo '<p class="chip chip-ev">' . $car->fuel . '</p>';
+            }
+            echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
         echo '</div>';
         echo '<img class="car-image-preview" src="./images/' . $car->image . '" alt="' . $car->name . '">';
         echo '<p id="car-make" class="list-smalltext uppercase bold">' . $car->type . '</p>';
         echo '<div class="container-spacebetween">';
             echo '<p id="car-model" class="list-bigtext">' . $car->name . ' (' . $car->year . ')</p>';
-            echo '<div id="car-price" class="right-align">';
+            echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
                 echo '<span class="list-bigtext">$' . number_format($car->price, 2) . '</span>';
                 echo '<span class="list-smalltext"> / day</span>';
             echo '</div>';

@@ -1,9 +1,9 @@
 $(document).ready(function() {
     // Navigation menu
     $('.nav-link').on('click', function() {
+        event.stopPropagation(); // Prevents closing of sub-menu
         $('#selector').find('input[name="nav-key"]').val($(this).data('key'));
         $('#selector').find('input[name="nav-value"]').val($(this).text());
-
         loadCarList();
     });
 
@@ -52,7 +52,7 @@ $(document).ready(function() {
     // Initial loads
     loadCarList();
     loadCarDetails('');
-    closeNav();
+    openNav();
 
     // Reload car list when user clicks out of a form field
     $('#selector').find('input').on('blur', function() {

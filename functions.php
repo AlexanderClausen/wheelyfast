@@ -94,6 +94,9 @@
         // Get all the unique values from the cars array
         $values = array_unique(array_column($cars, $key));
 
+        // Sort the values in ascending alphabetical order
+        sort($values);
+
         // Display the unique classes in the navigation menu
         foreach ($values as $value) {
             echo '<li class="nav-link sub-item" data-key="' . $key . '"><span class="nav-text">' . $value . '</span></li>';
