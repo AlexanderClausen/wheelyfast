@@ -106,6 +106,8 @@ hr {
 
 #car-list {
     flex: 1;
+    min-width: 30%;
+    max-width: 50%;
     background-color: whitesmoke;
     padding: 15px;
     /* background-color: #d6d8da; */
@@ -163,17 +165,17 @@ hr {
 
 .car-image-preview {
     width: 100%;
-    border-radius: 5px;
-    margin: 10px 0 10px 0;
+    border-radius: 8px;
+    margin: 5px 0 10px 0;
 }
 
-.list-bigtext {
+#car-list .bigtext, #sidenav .bigtext {
     font-size: 18px;
     font-weight: bold;
     margin: 0;
 }
 
-.list-smalltext {
+#car-list .smalltext, #sidenav .smalltext {
     font-size: 12px;
     color: gray;
     /* font-weight: bold; */
@@ -182,7 +184,10 @@ hr {
 
 #car-details {
     flex: 2;
+    min-width: 50%;
+    max-width: 70%;
     margin: 0 10px;
+    padding: 15px;
     /* border: 1px solid black; */
 }
 
@@ -214,14 +219,17 @@ header #logo-div {
 
 header #top-bar-logo {
     font-size: 300%;
-    margin-right: 10px;
     font-weight: bold;
 }
 
 header #top-bar-logo-text {
     font-size: 24px;
     font-weight: bold;
-    margin: 0;
+    margin: 0 10px;
+}
+
+header #top-bar-location {
+    font-size: 24px;
 }
 
 /* Hamburger button */
@@ -384,15 +392,93 @@ header #top-bar-logo-text {
     color: lightgray;
 }
 
-#car-image {
+#car-details .bigtext {
+    font-size: 27px;
+    font-weight: bold;
+    margin: 0;
+}
+
+#car-details .smalltext {
+    font-size: 18px;
+    color: gray;
+    /* font-weight: bold; */
+    margin: 0;
+}
+
+#car-details {
+    font-size: 18px;
+}
+
+#car-images-container {
+    position: relative;
+}
+
+#car-images {
+    display: flex;
+    overflow-x: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.scroll-button {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: transparent;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: auto;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.scroll-button::before {
+    content: attr(data-content);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 30px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#scroll-left {
+    left: 0;
+    /* background: linear-gradient(to left, transparent 0%, rgba(255, 255, 255, 0.7)); */
+    display: none;
+}
+
+#scroll-right {
+    right: 0;
+    /* background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.7)); */
+    /* display: none; */
+}
+
+.car-image {
     width: 100%;
     border-radius: 10px;
+    flex-shrink: 0;
+    width: 80%;
+    height: auto;
+    margin-left: 10px;
+}
+
+.car-image:first-of-type {
+    margin-left: 0;
 }
 
 .chip {
     display: inline-block;
     padding: 5px 10px;
-    margin: 0 5px 0 0;
+    margin: 0 5px 5px 0;
     border-radius: 20px;
     font-size: 12px;
     width: auto;

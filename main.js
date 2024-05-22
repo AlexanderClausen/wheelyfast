@@ -44,6 +44,43 @@ $(document).ready(function() {
             data: { id: carId, start_date: startDate, end_date: endDate},
             success: function(data) {
                 $('#car-details').html(data);
+
+                // Image scrollers
+                var carImages = document.getElementById('car-images');
+                var scrollLeft = document.getElementById('scroll-left');
+                var scrollRight = document.getElementById('scroll-right');
+
+                // document.body.addEventListener('click', function(event) {
+                //     if (event.target.id === 'scroll-right') {
+                //         carImages.scrollLeft = carImages.scrollWidth;
+                //         scrollRight.style.display = 'none';
+                //         scrollLeft.style.display = 'block';
+                //         console.log(carImages.scrollWidth);
+                //     } else if (event.target.id === 'scroll-left') {
+                //         carImages.scrollLeft = 0;
+                //         scrollLeft.style.display = 'none';
+                //         scrollRight.style.display = 'block';
+                //         console.log(carImages.scrollWidth);
+                //     }
+                // });
+
+                document.body.addEventListener('click', function(event) {
+                    if (event.target.id === 'scroll-right') {
+                        carImages.scrollTo({
+                            left: carImages.scrollWidth,
+                            behavior: "smooth"
+                        })
+                        scrollRight.style.display = 'none';
+                        scrollLeft.style.display = 'block';
+                    } else if (event.target.id === 'scroll-left') {
+                        carImages.scrollTo({
+                            left: 0,
+                            behavior: "smooth"
+                        })
+                        scrollLeft.style.display = 'none';
+                        scrollRight.style.display = 'block';
+                    }
+                });
             } 
         });
         console.log('Selected car with id ' + carId + ' (' + startDate + ' to ' + endDate + ')');

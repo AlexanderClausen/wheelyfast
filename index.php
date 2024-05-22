@@ -8,7 +8,7 @@ include 'functions.php';
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Wheely Fast</title>
+    <title>WheelyFast</title>
     
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
@@ -18,11 +18,12 @@ include 'functions.php';
 </head>
 <body>
     <header id="header">
-        <a href="./" id="logo-div">
-            <!-- <a id="top-bar-logo" class="logo" href="./">Wheely Fast</a> -->
+        <div id="logo-div">
+            <!-- <a id="top-bar-logo" class="logo" href="./">WheelyFast</a> -->
             <span id="top-bar-logo" class="material-symbols-outlined">speed</span>
-            <span id="top-bar-logo-text">Wheely Fast</span>
-        </a>
+            <span id="top-bar-logo-text">WheelyFast</span>
+            <span id="top-bar-location">Sydney</span>
+        </div>
     </header>
     <nav id="sidenav" class="sidenav">
         <?php include 'nav.php'; ?>

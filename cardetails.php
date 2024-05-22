@@ -16,10 +16,30 @@ if ($_GET['id'] == '') {
     $car = getCarDetails($_GET['id'], $_GET['start_date'], $_GET['end_date']);
 
     echo '<div class="car-details">';
-        echo '<img id="car-image" src="./images/' . $car->image . '" alt="' . $car->name . '">';
+        echo '<div id="car-images-container">';
+            echo '<button id="scroll-left" class="scroll-button" data-content="&lt;"></button>';
+            echo '<button id="scroll-right" class="scroll-button" data-content="&gt;"></button>';
+            echo '<div id="car-images">';
+                echo '<img id="car-image-exterior" class="car-image" src="./images/' . $car->image . '" alt="' . $car->name . '">';
+                if ($car->year >= 2000) {
+                    echo '<img id="car-image-interior" class="car-image" src="./images/interior_new.webp" alt="' . $car->name . '">';
+                } else {
+                    echo '<img id="car-image-interior" class="car-image" src="./images/interior_old.webp" alt="' . $car->name . '">';
+                }
+            echo '</div>';
+        echo '</div>';
         echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
-        echo '<p id="car-name">' . $car->name . ' (' . $car->year . ')</p>';
-        echo '<p id="car-infoline">' . $car->class . ' car | ' . $car->type . '</p>';
+        echo '<p id="car-type" class="smalltext">' . $car->type . '</p>';
+        // echo '<p id="car-name" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
+        echo '<div class="container-spacebetween">';
+            echo '<p id="car-model" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
+            echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
+                echo '<span class="bigtext">$' . number_format($car->price, 2) . '</span>';
+                echo '<span class="smalltext"> / day</span>';
+            echo '</div>';
+        echo '</div>';
+        
+        echo '<p id="car-infoline">' . $car->class . ' car</p>';
         echo '<p id="car-description">' . $car->description . '</p>';
 
         echo '<table><tr>';

@@ -49,7 +49,7 @@ if ($exclude_unavailable) {
 // echo '</details>';
 
 foreach ($cars as $car) {
-    if (!$car->available) {
+    if (!$car->enabled) {
         continue;
     }
 
@@ -66,12 +66,12 @@ foreach ($cars as $car) {
             echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
         echo '</div>';
         echo '<img class="car-image-preview" src="./images/' . $car->image . '" alt="' . $car->name . '">';
-        echo '<p id="car-make" class="list-smalltext uppercase bold">' . $car->type . '</p>';
+        echo '<p id="car-make" class="smalltext uppercase bold">' . $car->type . '</p>';
         echo '<div class="container-spacebetween">';
-            echo '<p id="car-model" class="list-bigtext">' . $car->name . ' (' . $car->year . ')</p>';
+            echo '<p id="car-model" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
             echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
-                echo '<span class="list-bigtext">$' . number_format($car->price, 2) . '</span>';
-                echo '<span class="list-smalltext"> / day</span>';
+                echo '<span class="bigtext">$' . number_format($car->price, 2) . '</span>';
+                echo '<span class="smalltext"> / day</span>';
             echo '</div>';
         echo '</div>';
         echo '<hr>';

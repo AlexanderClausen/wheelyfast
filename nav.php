@@ -12,28 +12,28 @@
             <tr>
                 <td><span class="material-symbols-outlined nav-icon">line_start_diamond</span></td>
                 <td class="selector-item">
-                    <label for="start-date" class="list-smalltext">From:</label>
+                    <label for="start-date" class="smalltext">From:</label>
                     <input type="date" id="start-date" name="start-date" value="<?php echo date('Y-m-d'); ?>" min="<?php echo date('Y-m-d'); ?>" required>
                 </td>
             </tr>
             <tr>
                 <td><span class="material-symbols-outlined nav-icon">line_end_diamond</span></td>
                 <td class="selector-item">
-                    <label for="end-date" class="list-smalltext">To:</label>
+                    <label for="end-date" class="smalltext">To:</label>
                     <input type="date" id="end-date" name="end-date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" min="<?php echo date('Y-m-d'); ?>" required>
                 </td>
             </tr>
             <!-- <tr>
                 <td><span class="material-symbols-outlined nav-icon">visibility</span></td>
                 <td class="selector-item">
-                    <label for="exclude-unavailable" class="list-smalltext">Hide Booked:</label>
+                    <label for="exclude-unavailable" class="smalltext">Hide Booked:</label>
                     <input type="checkbox" id="exclude-unavailable" name="exclude-unavailable">
                 </td>
             </tr> -->
             <tr>
                 <td><span class="material-symbols-outlined nav-icon">star</span></td>
                 <td class="selector-item">
-                    <label for="premium-filter" class="list-smalltext">Premium cars:</label>
+                    <label for="premium-filter" class="smalltext">Premium cars:</label>
                     <select id="premium-filter" name="premium-filter">
                         <option value="all">Show all</option>
                         <option value="only">Only</option>
@@ -42,6 +42,7 @@
                 </td>
             </tr>
         </table>
+        <input type="hidden" name="location_file" value="">
         <input type="hidden" name="nav-key" value="">
         <input type="hidden" name="nav-value" value="">
     </form>
