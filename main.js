@@ -5,6 +5,7 @@ $(document).ready(function() {
         $('#selector').find('input[name="nav-key"]').val($(this).data('key'));
         $('#selector').find('input[name="nav-value"]').val($(this).text());
         loadCarList();
+        closeNav();
     });
 
     // Functions to open and close side navigation
@@ -50,20 +51,6 @@ $(document).ready(function() {
                 var scrollLeft = document.getElementById('scroll-left');
                 var scrollRight = document.getElementById('scroll-right');
 
-                // document.body.addEventListener('click', function(event) {
-                //     if (event.target.id === 'scroll-right') {
-                //         carImages.scrollLeft = carImages.scrollWidth;
-                //         scrollRight.style.display = 'none';
-                //         scrollLeft.style.display = 'block';
-                //         console.log(carImages.scrollWidth);
-                //     } else if (event.target.id === 'scroll-left') {
-                //         carImages.scrollLeft = 0;
-                //         scrollLeft.style.display = 'none';
-                //         scrollRight.style.display = 'block';
-                //         console.log(carImages.scrollWidth);
-                //     }
-                // });
-
                 document.body.addEventListener('click', function(event) {
                     if (event.target.id === 'scroll-right') {
                         carImages.scrollTo({
@@ -81,7 +68,16 @@ $(document).ready(function() {
                         scrollRight.style.display = 'block';
                     }
                 });
-            } 
+
+                window.addEventListener('resize', function() {
+                    if (carImages.scrollLeft > 0) {
+                        carImages.scrollTo({
+                            left: carImages.scrollWidth,
+                            behavior: "instant"
+                        });
+                    }
+                });
+            }
         });
         console.log('Selected car with id ' + carId + ' (' + startDate + ' to ' + endDate + ')');
     }
