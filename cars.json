@@ -16,7 +16,7 @@
         "luggage": 3,
         "quantity": 3,
         "price": 70,
-        "description": "",
+        "description": "The Hyundai Tucson is a versatile and stylish SUV, perfect for those who crave adventure and comfort. With its bold design, advanced safety features, and spacious interior, the Tucson is ideal for families and outdoor enthusiasts alike. It offers a smooth and responsive ride, thanks to its efficient engine and state-of-the-art technology. The generous cargo space ensures you can bring all your gear, whether you're heading to the mountains or the beach. With its combination of practicality and luxury, the Hyundai Tucson is the ultimate companion for both city driving and weekend getaways.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -43,7 +43,7 @@
         "luggage": 2,
         "quantity": 1,
         "price": 90,
-        "description": "",
+        "description": "The Tesla Model S redefines what an electric car can be, offering unmatched performance, range, and technology. This luxury sedan boasts a sleek and futuristic design, combined with a spacious and elegant interior. The Model S is equipped with cutting-edge features, including autopilot capabilities and an impressive infotainment system. Its dual motor all-wheel drive provides exceptional acceleration and handling, making every drive exhilarating. With a long-range battery, you can travel further without frequent charging stops. Environmentally friendly and technologically advanced, the Tesla Model S is the perfect choice for those seeking innovation and luxury in their driving experience.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -70,7 +70,7 @@
         "luggage": 2,
         "quantity": 2,
         "price": 80,
-        "description": "",
+        "description": "The Tesla Model Y combines the best of both worlds, offering the performance and technology of a Tesla with the practicality of a compact SUV. This all-electric vehicle boasts impressive acceleration, a long driving range, and advanced autopilot capabilities. Inside, the Model Y offers a minimalist and spacious cabin, complete with a large touchscreen interface and ample cargo space. Its versatile seating arrangements make it perfect for families and adventurers alike. With its cutting-edge technology, superior safety features, and eco-friendly nature, the Tesla Model Y is the ideal choice for those looking for an innovative and practical electric vehicle.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -97,7 +97,7 @@
         "luggage": 1,
         "quantity": 2,
         "price": 30,
-        "description": "",
+        "description": "The Suzuki Swift is a compact car that’s big on personality and performance. Perfect for city driving, the Swift is known for its agile handling, fuel efficiency, and stylish design. Its compact size makes it easy to maneuver through tight city streets and find parking in crowded areas. Inside, you'll find a surprisingly spacious and well-designed interior, equipped with modern features for a comfortable ride. Whether you're commuting to work or running errands, the Suzuki Swift provides a fun and economical driving experience without compromising on style or comfort.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -124,7 +124,7 @@
         "luggage": 3,
         "quantity": 1,
         "price": 70,
-        "description": "",
+        "description": "The Polestar 2 is a cutting-edge electric vehicle that blends Scandinavian design with high performance. This sleek and modern sedan offers a powerful electric drivetrain, providing instant acceleration and a smooth, quiet ride. The Polestar 2 features a minimalist interior with high-quality materials and a state-of-the-art infotainment system powered by Google. With a substantial electric range and fast-charging capabilities, it's perfect for both daily commutes and long-distance travel. The Polestar 2 stands out for its commitment to sustainability and innovation, making it an excellent choice for those looking to make a statement with their vehicle.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -151,7 +151,7 @@
         "luggage": 4,
         "quantity": 5,
         "price": 45,
-        "description": "",
+        "description": "The Mazda CX-30 is a compact crossover that offers the perfect balance between sporty performance and everyday practicality. Its stylish design, both inside and out, is complemented by a refined interior featuring high-quality materials and advanced technology. The CX-30 provides a comfortable and engaging driving experience, with responsive handling and a smooth ride. Ample cargo space and versatile seating make it ideal for families and weekend adventures. With a focus on safety and driver assistance features, the Mazda CX-30 ensures peace of mind on every journey, making it a top choice for those who want a versatile and stylish SUV.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -178,7 +178,7 @@
         "luggage": 2,
         "quantity": 2,
         "price": 35,
-        "description": "",
+        "description": "The Hyundai i30 is a compact hatchback that combines practicality, efficiency, and modern features. Its sleek design is matched by a comfortable and spacious interior, equipped with the latest technology to enhance your driving experience. The i30 offers a smooth and economical ride, making it perfect for both city commutes and long road trips. Advanced safety features and a user-friendly infotainment system ensure you stay connected and protected on the road. With its blend of style, functionality, and reliability, the Hyundai i30 is an excellent choice for those seeking a versatile and dependable hatchback.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -205,7 +205,7 @@
         "luggage": 3,
         "quantity": 4,
         "price": 50,
-        "description": "",
+        "description": "The Toyota Corolla is a legendary compact car known for its reliability, efficiency, and value. With a sleek exterior design and a comfortable, well-appointed interior, the Corolla is perfect for everyday driving. Its fuel-efficient engine ensures economical trips, while advanced safety features provide peace of mind for you and your passengers. The Corolla’s user-friendly infotainment system keeps you connected and entertained on the go. Whether you’re commuting to work, running errands, or embarking on a road trip, the Toyota Corolla delivers a smooth and dependable ride, making it a perennial favorite among drivers worldwide.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -232,7 +232,7 @@
         "luggage": 5,
         "quantity": 2,
         "price": 100,
-        "description": "",
+        "description": "The Audi Q7 is the epitome of luxury and performance in an SUV. This premium vehicle offers a sophisticated design, both inside and out, with a spacious and meticulously crafted interior that seats up to seven passengers. Equipped with advanced technology, including a virtual cockpit and an intuitive infotainment system, the Q7 ensures a connected and comfortable ride. Its powerful engine options and quattro all-wheel drive deliver a dynamic and confident driving experience on any terrain. With a focus on safety and versatility, the Audi Q7 is perfect for families and those who demand the best in automotive excellence.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -259,7 +259,7 @@
         "luggage": 5,
         "quantity": 1,
         "price": 120,
-        "description": "",
+        "description": "The Ford Everest Wildtrak is built for adventure, offering rugged capability and comfort in one robust package. This 4WD SUV features a powerful engine, exceptional towing capacity, and advanced off-road technologies, making it perfect for tackling rough terrains and long road trips. Inside, the Wildtrak provides a spacious and versatile cabin with premium materials and cutting-edge technology, including a comprehensive infotainment system. Safety is a priority, with numerous driver-assistance features to ensure a secure journey. The Ford Everest Wildtrak is the ultimate choice for those who need a reliable and adventurous vehicle for all their explorations.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -286,7 +286,7 @@
         "luggage": 0,
         "quantity": 6,
         "price": 95,
-        "description": "",
+        "description": "The Mine Equip 4WD Dual Cab is designed for the toughest jobs in the most demanding environments. This robust and durable vehicle offers exceptional off-road capability, with a powerful engine and rugged suspension system built to handle heavy loads and rough terrains. The dual cab configuration provides ample space for passengers and equipment, making it ideal for work sites and off-road excursions. Inside, the cabin is practical and functional, with essential features to ensure comfort and convenience. The Mine Equip 4WD Dual Cab is the perfect choice for those who need a reliable and hardworking vehicle for challenging conditions.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -313,7 +313,7 @@
         "luggage": 3,
         "quantity": 8,
         "price": 50,
-        "description": "",
+        "description": "The MG ZS is a stylish and practical compact SUV that offers excellent value for money. Its contemporary design is complemented by a comfortable and spacious interior, equipped with modern features to enhance your driving experience. The ZS provides a smooth and efficient ride, making it ideal for city commutes and weekend getaways. With a user-friendly infotainment system and advanced safety features, you can enjoy a connected and secure journey. The MG ZS stands out for its affordability, reliability, and versatility, making it a great option for those seeking a budget-friendly SUV without compromising on quality and comfort.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -340,7 +340,7 @@
         "luggage": 4,
         "quantity": 2,
         "price": 100,
-        "description": "",
+        "description": "The Kia Carnival is a versatile and luxurious minivan designed to meet the needs of modern families. With its sleek exterior and spacious interior, the Carnival offers seating for up to eight passengers, making it perfect for large families or group travel. The cabin is equipped with high-quality materials, advanced technology, and ample storage space for all your belongings. The Carnival's powerful engine ensures a smooth and responsive drive, while its comprehensive safety features provide peace of mind on every journey. Whether you're running errands or embarking on a road trip, the Kia Carnival delivers comfort, convenience, and style in one impressive package.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -367,7 +367,7 @@
         "luggage": 1,
         "quantity": 1,
         "price": 30,
-        "description": "",
+        "description": "The Small Mystery Car option is perfect for those seeking an economical and practical solution for city driving. While the specific make and model remain a surprise, you can expect a compact car that excels in fuel efficiency and maneuverability. Ideal for urban environments, this car will easily navigate tight streets and fit into small parking spaces. The interior will offer comfortable seating for up to four passengers, with modern conveniences such as air conditioning, a user-friendly infotainment system, and essential safety features. Choose the Small Mystery Car for an affordable and reliable ride that meets your everyday needs.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -394,7 +394,7 @@
         "luggage": 2,
         "quantity": 1,
         "price": 45,
-        "description": "",
+        "description": "The Medium Mystery Car offers a balanced blend of comfort, space, and performance, suitable for a variety of driving needs. Although the exact model remains a mystery, you can anticipate a midsize sedan or hatchback with ample room for passengers and luggage. This category ensures a smooth and enjoyable driving experience, with features such as advanced safety systems, a modern infotainment setup, and efficient fuel consumption. Perfect for both city commutes and longer journeys, the Medium Mystery Car is a versatile and cost-effective choice for those seeking quality and comfort without knowing the specific brand.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -421,7 +421,7 @@
         "luggage": 3,
         "quantity": 1,
         "price": 70,
-        "description": "",
+        "description": "Opt for the Large Mystery Car and enjoy the benefits of a spacious and powerful vehicle at a great value. While the exact make and model are kept under wraps, you can expect a full-size sedan, SUV, or crossover with plenty of room for passengers and cargo. This category is ideal for families, group trips, or those who simply prefer more space and a commanding presence on the road. Features may include advanced technology, superior safety systems, and a comfortable, well-appointed interior. The Large Mystery Car provides the assurance of a high-quality vehicle designed to handle any journey, all while keeping the element of surprise.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -448,7 +448,7 @@
         "luggage": 5,
         "quantity": 2,
         "price": 100,
-        "description": "",
+        "description": "The RAM 1500 is a full-size pickup truck that combines rugged capability with premium comfort. Known for its powerful performance and impressive towing capacity, the RAM 1500 is perfect for both work and leisure. Its spacious and well-designed interior features high-quality materials and advanced technology, including a user-friendly infotainment system and comprehensive safety features. The smooth ride and responsive handling make it a pleasure to drive, whether you're hauling heavy loads or cruising on the highway. With its blend of strength, luxury, and innovation, the RAM 1500 is an excellent choice for those who demand more from their truck.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -475,7 +475,7 @@
         "luggage": 5,
         "quantity": 1,
         "price": 130,
-        "description": "",
+        "description": "The RAM Heavy Duty 3500 is built for the toughest jobs, offering unparalleled power and durability. This heavy-duty pickup truck is equipped with a high-performance engine and exceptional towing and payload capacities, making it ideal for commercial use and demanding tasks. Inside, the RAM 3500 provides a comfortable and spacious cabin with advanced technology and premium materials. Safety and convenience features abound, ensuring a secure and efficient driving experience. Whether you're on a construction site or transporting heavy equipment, the RAM Heavy Duty 3500 delivers the strength and reliability you need to get the job done.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -502,7 +502,7 @@
         "luggage": 3,
         "quantity": 2,
         "price": 90,
-        "description": "",
+        "description": "The Ford Ranger Raptor is a high-performance off-road pickup truck designed for adventure. With its aggressive styling and robust build, the Ranger Raptor is ready to tackle any terrain. Its powerful engine and advanced off-road suspension system provide exceptional handling and control, making it perfect for off-road enthusiasts. Inside, the Ranger Raptor offers a comfortable and well-equipped cabin with modern amenities and safety features. Whether you're navigating rough trails or cruising on the highway, the Ford Ranger Raptor delivers an exhilarating driving experience and the versatility to handle any challenge.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -529,7 +529,7 @@
         "luggage": 4,
         "quantity": 1,
         "price": 150,
-        "description": "",
+        "description": "The Mercedes-Benz AMG G63 is a luxury SUV that combines iconic design with extraordinary performance. Known for its distinctive boxy shape, the AMG G63 offers a powerful engine and advanced all-wheel-drive system, delivering exceptional on-road and off-road capabilities. The opulent interior features premium materials, cutting-edge technology, and a spacious layout, ensuring comfort and convenience for all passengers. With its blend of luxury, performance, and ruggedness, the Mercedes-Benz AMG G63 is perfect for those who demand the best in style and capability, whether they're navigating city streets or exploring the wilderness.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -556,7 +556,7 @@
         "luggage": 1,
         "quantity": 3,
         "price": 35,
-        "description": "",
+        "description": "The Volkswagen Polo is a compact car that offers a perfect blend of practicality, efficiency, and style. Known for its agile handling and fuel economy, the Polo is ideal for city driving and daily commutes. Its modern and well-designed interior provides comfortable seating, advanced infotainment, and essential safety features, ensuring a pleasant driving experience. The Polo's compact size makes it easy to maneuver and park in urban environments, while its reliable performance makes it suitable for longer journeys. With its reputation for quality and value, the Volkswagen Polo is an excellent choice for those seeking a dependable and stylish compact car.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -583,7 +583,7 @@
         "luggage": 2,
         "quantity": 6,
         "price": 40,
-        "description": "",
+        "description": "The Volkswagen Golf is a versatile and popular hatchback that excels in both performance and practicality. Known for its refined design and solid build quality, the Golf offers a comfortable and spacious interior equipped with advanced technology and safety features. Its efficient engines provide a smooth and responsive driving experience, making it suitable for both city commutes and long-distance travel. The Golf's combination of style, functionality, and reliability has made it a favorite among drivers worldwide. Whether you're looking for a practical daily driver or a fun and engaging ride, the Volkswagen Golf delivers on all fronts.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -610,7 +610,7 @@
         "luggage": 2,
         "quantity": 1,
         "price": 150,
-        "description": "",
+        "description": "The Mercedes-Benz EQS is a cutting-edge electric luxury sedan that represents the future of automotive innovation. With its sleek and futuristic design, the EQS offers a spacious and luxurious interior featuring the latest technology and premium materials. The all-electric powertrain provides impressive acceleration, a long driving range, and zero emissions, making it an eco-friendly choice for discerning drivers. Advanced driver assistance systems and connectivity features ensure a safe and convenient journey. The Mercedes-Benz EQS combines sustainability with luxury and performance, setting a new standard for electric vehicles.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -637,7 +637,7 @@
         "luggage": 2,
         "quantity": 1,
         "price": 200,
-        "description": "",
+        "description": "The 1970 Ford Mustang is an iconic American muscle car that embodies the spirit of classic automotive design and performance. With its powerful V8 engine and aggressive styling, the 1970 Mustang delivers exhilarating acceleration and a commanding presence on the road. The interior features a nostalgic yet functional design, providing a comfortable driving experience with vintage charm. Known for its distinctive look and legendary performance, the 1970 Ford Mustang remains a symbol of automotive history and a favorite among car enthusiasts. Whether you're cruising down the highway or showcasing it at car shows, the 1970 Mustang is sure to turn heads and ignite passion.",
         "features": {
             "aircon": false,
             "bluetooth": false,
@@ -664,7 +664,7 @@
         "luggage": 1,
         "quantity": 2,
         "price": 70,
-        "description": "",
+        "description": "The Mazda MX-5, also known as the Miata, is a lightweight and nimble sports car that delivers pure driving pleasure. Its sleek design and low stance enhance its sporty appeal, while the responsive handling and precise steering make every drive exhilarating. The MX-5 features a comfortable and driver-focused interior with modern amenities and advanced safety features. Its retractable soft top allows you to enjoy open-air driving at the push of a button. Whether you're navigating winding roads or cruising the city, the Mazda MX-5 offers an engaging and fun driving experience that has made it a favorite among enthusiasts.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -691,7 +691,7 @@
         "luggage": 0,
         "quantity": 1,
         "price": 150,
-        "description": "",
+        "description": "The Porsche 911 Carrera Cabriolet is the epitome of luxury and performance in an open-top sports car. With its iconic design and powerful engine, the 911 Carrera Cabriolet offers thrilling acceleration and exceptional handling. The convertible top allows you to experience the joy of open-air driving while the meticulously crafted interior provides premium comfort and advanced technology. Equipped with cutting-edge safety and driver assistance systems, the 911 Carrera Cabriolet ensures a secure and enjoyable ride. Perfect for those who crave performance and sophistication, this Porsche model delivers an unmatched driving experience.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -718,7 +718,7 @@
         "luggage": 2,
         "quantity": 5,
         "price": 40,
-        "description": "",
+        "description": "The MG 3 is a stylish and affordable compact hatchback that offers great value for money. Its modern design and vibrant color options make it stand out on the road, while the spacious and well-appointed interior ensures a comfortable ride for all passengers. The MG 3 is equipped with essential safety features and a user-friendly infotainment system, making it a practical choice for city driving and daily commutes. With its efficient engine and agile handling, the MG 3 provides an enjoyable and economical driving experience. Ideal for young drivers and those looking for a budget-friendly option, the MG 3 combines style, practicality, and affordability.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -745,7 +745,7 @@
         "luggage": 2,
         "quantity": 2,
         "price": 80,
-        "description": "",
+        "description": "The Mercedes-Benz CLA is a sleek and stylish compact sedan that blends luxury with performance. Its dynamic design and refined interior make a bold statement, while the advanced technology and high-quality materials ensure a premium driving experience. The CLA offers responsive handling and a smooth ride, powered by efficient yet powerful engines. Inside, you'll find cutting-edge infotainment and safety features, providing convenience and peace of mind. Whether you're commuting to work or enjoying a weekend getaway, the Mercedes-Benz CLA delivers elegance and excitement in every drive, making it a standout choice in the compact luxury segment.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -772,7 +772,7 @@
         "luggage": 4,
         "quantity": 3,
         "price": 90,
-        "description": "",
+        "description": "The Toyota HiLux is a rugged and reliable pickup truck known for its durability and versatility. Built to handle tough conditions, the HiLux offers impressive off-road capabilities and a robust payload capacity, making it ideal for both work and play. The spacious and practical interior provides comfort and functionality, with modern features to enhance your driving experience. Advanced safety systems and a powerful engine ensure a secure and confident ride, whether you're navigating challenging terrains or cruising on the highway. The Toyota HiLux is the perfect choice for those who need a dependable and capable vehicle for all their adventures.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -799,7 +799,7 @@
         "luggage": 1,
         "quantity": 1,
         "price": 200,
-        "description": "",
+        "description": "The 1966 Porsche 911 is a classic sports car that has become a symbol of automotive excellence and heritage. Known for its timeless design and exceptional performance, the 1966 911 features a distinctive shape and a powerful flat-six engine that delivers exhilarating driving dynamics. The minimalist yet elegant interior provides a nostalgic feel, reflecting the car's rich history and craftsmanship. Renowned for its precision handling and iconic status, the 1966 Porsche 911 continues to captivate car enthusiasts and collectors worldwide. Whether you're taking it for a spirited drive or showcasing it at a classic car event, the 1966 Porsche 911 embodies the spirit of pure driving pleasure.",
         "features": {
             "aircon": false,
             "bluetooth": false,
