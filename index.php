@@ -32,7 +32,7 @@ include 'functions.php';
         <section class="container">
             <div id="car-list">
             </div>
-            <div id="car-details">
+            <div id="car-details" class="no-car">
             </div>
         </section>
     </main>

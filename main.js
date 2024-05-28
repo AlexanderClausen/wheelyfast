@@ -39,6 +39,7 @@ $(document).ready(function() {
 
     // Function to load car details
     function loadCarDetails(carId, startDate, endDate) {
+        $('.car').removeClass('active');
         $.ajax({
             type: 'GET',
             url: 'cardetails.php',
@@ -80,6 +81,12 @@ $(document).ready(function() {
             }
         });
         console.log('Selected car with id ' + carId + ' (' + startDate + ' to ' + endDate + ')');
+        if (carId !== '') {
+            $('#car-details').removeClass('no-car');
+            $('.car[data-id="' + carId + '"]').addClass('active');
+        } else {
+            $('#car-details').addClass('no-car');
+        }
     }
 
     // Initial loads
@@ -125,10 +132,14 @@ $(document).ready(function() {
 
     // Car details
     $('#car-list').on('click', '.detail-link', function() {
-        var carId = $(this).data('id');
-        var startDate = $('#start-date').val();
-        var endDate = $('#end-date').val();
-        loadCarDetails(carId, startDate, endDate);
+        if ($(this).hasClass('active')) {
+            loadCarDetails('');
+        } else {
+            var carId = $(this).data('id');
+            var startDate = $('#start-date').val();
+            var endDate = $('#end-date').val();
+            loadCarDetails(carId, startDate, endDate);
+        }
     });
 
     // Autocomplete search bar

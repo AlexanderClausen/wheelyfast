@@ -32,6 +32,10 @@ if ($exclude_unavailable) {
     echo '<p class="results-factor">&#8594; Excluding unavailable cars</p>';
 }
 
+if ($premium_filter != 'all') {
+    echo '<p class="results-factor">&#8594; Showing ' . ($premium_filter == 'premium' ? 'premium' : 'non-premium') . ' cars only</p>';
+}
+
 // // DEBUG: Output raw car list
 // echo '<details>';
 // echo '<summary>DEBUG OUTPUT (exclude_unavailable: ' . ($exclude_unavailable ? 'true' : 'false') . ')</summary>';
@@ -48,39 +52,45 @@ if ($exclude_unavailable) {
 // echo '</pre>';
 // echo '</details>';
 
-foreach ($cars as $car) {
-    if (!$car->enabled) {
-        continue;
-    }
+echo '<div id="car-grid">';
+    foreach ($cars as $car) {
+        if (!$car->enabled) {
+            continue;
+        }
 
-    echo '<div class="car detail-link" data-id="' . $car->id . '">';
-        echo '<div class="car-chips">';
-            echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
-            // echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
-            if ($car->premium) {
-                echo '<p class="chip chip-premium">Premium</p>';
-            }
-            if ($car->fuel == 'Electric' || $car->fuel == 'Hybrid') {
-                echo '<p class="chip chip-ev">' . $car->fuel . '</p>';
-            }
-            echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
-        echo '</div>';
-        echo '<img class="car-image-preview" src="./images/' . $car->image . '" alt="' . $car->name . '">';
-        echo '<p id="car-make" class="smalltext uppercase bold">' . $car->type . '</p>';
-        echo '<div class="container-spacebetween">';
-            echo '<p id="car-model" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
-            echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
-                echo '<span class="bigtext">$' . number_format($car->price, 2) . '</span>';
-                echo '<span class="smalltext"> / day</span>';
+        echo '<div class="car detail-link" data-id="' . $car->id . '">';
+            echo '<div class="car-chips">';
+                echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
+                // echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
+                if ($car->premium) {
+                    echo '<p class="chip chip-premium">Premium</p>';
+                }
+                if ($car->fuel == 'Electric' || $car->fuel == 'Hybrid') {
+                    echo '<p class="chip chip-ev">' . $car->fuel . '</p>';
+                }
+                echo '<p class="chip chip-neutral">' . $car->class . ' car</p>';
+            echo '</div>';
+            echo '<div>';
+                echo '<img class="car-image-preview" src="./images/' . $car->image . '" alt="' . $car->name . '">';
+                echo '<p id="car-make" class="smalltext uppercase bold">' . $car->type . '</p>';
+                echo '<div class="container-spacebetween">';
+                    echo '<p id="car-model" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
+                    echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
+                        echo '<span class="bigtext">$' . number_format($car->price, 2) . '</span>';
+                        echo '<span class="smalltext"> / day</span>';
+                    echo '</div>';
+                echo '</div>';
+            echo '</div>';
+            echo '<div>';
+                echo '<hr>';
+                echo '<div class="list-properties">';
+                    // echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
+                    echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
+                    echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
+                    echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';
+                    echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">luggage</span><p class="list-property-text">' . $car->luggage . '</p></div>';
+                echo '</div>';
             echo '</div>';
         echo '</div>';
-        echo '<hr>';
-        echo '<div class="list-properties">';
-            // echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
-            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
-            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
-            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';
-            echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">luggage</span><p class="list-property-text">' . $car->luggage . '</p></div>';
-        echo '</div>';
-    echo '</div>';
-}
+    }
+echo '</div>';
