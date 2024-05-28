@@ -181,4 +181,9 @@ $(document).ready(function() {
             openNav();
         }
     });
+
+    // Reservation button
+    $('#reservation-button').on('click', function() {
+        document.documentElement.style.setProperty('--nav-width', '0');
+    });
 });

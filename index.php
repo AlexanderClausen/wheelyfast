@@ -24,6 +24,9 @@ include 'functions.php';
             <span id="top-bar-logo-text">WheelyFast</span>
             <span id="top-bar-location">Sydney</span>
         </div>
+        <div id="reservation-div">
+            <button id="reservation-button" class="big-button">Reservation</button>
+        </div>
     </header>
     <nav id="sidenav" class="sidenav">
         <?php include 'nav.php'; ?>

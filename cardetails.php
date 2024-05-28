@@ -15,6 +15,10 @@ if ($_GET['id'] == '') {
 
     $car = getCarDetails($_GET['id'], $_GET['start_date'], $_GET['end_date']);
 
+    $start_date = date_create($_GET['start-date'] ?? null);
+    $end_date = date_create($_GET['end-date'] ?? null);
+    $number_days = date_diff($start_date, $end_date)->days + 1;
+
     echo '<div class="car-details">';
         echo '<div id="car-images-container">';
             echo '<button id="scroll-left" class="scroll-button" data-content="&lt;"></button>';
@@ -43,6 +47,7 @@ if ($_GET['id'] == '') {
 
         echo '<div class="container">';
             echo '<div id="car-properties-container">';
+                echo '<button class="big-button rentnow ' . ($car->booked ? 'unavailable' : 'available') . '">Rent now</button>';
                 echo '<div class="container-spacebetween">';
                     echo '<span class="feature ' . ($car->features->aircon ? 'true' : 'false') . ' tooltip" id="car-aircon"><span class="material-symbols-outlined">mode_fan</span><span class="tooltiptext">A/C: ' . ($car->features->aircon ? '&check;' : '&cross;') . '</span></span>';
                     echo '<span class="feature ' . ($car->features->bluetooth ? 'true' : 'false') . ' tooltip" id="car-bluetooth"><span class="material-symbols-outlined">bluetooth</span><span class="tooltiptext">Bluetooth: ' . ($car->features->bluetooth ? '&check;' : '&cross;') . '</span></span>';

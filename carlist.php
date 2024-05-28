@@ -60,7 +60,7 @@ echo '<div id="car-grid">';
 
         echo '<div class="car detail-link" data-id="' . $car->id . '">';
             echo '<div class="car-chips">';
-                echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
+                echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') . '" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
                 // echo '<p class="chip chip-neutral">ID: ' . $car->id . '</p>'; // DEBUG
                 if ($car->premium) {
                     echo '<p class="chip chip-premium">Premium</p>';
@@ -89,6 +89,7 @@ echo '<div id="car-grid">';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">luggage</span><p class="list-property-text">' . $car->luggage . '</p></div>';
+                    echo '<button class="list-property small-button rentnow ' . ($car->booked ? 'unavailable' : 'available') . '">Rent now</button>';
                 echo '</div>';
             echo '</div>';
         echo '</div>';

@@ -5,6 +5,10 @@
     src: url(./fonts/MaterialSymbolsOutlined.woff2) format('woff');
 }
 
+* {
+    transition: background-color 0.3s;
+}
+
 .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;
@@ -19,7 +23,7 @@
     direction: ltr;
 }
 
-/* Colors */
+/* Variables */
 :root {
     --primary-color: #007DFC;
     --secondary-color: #383838;
@@ -131,32 +135,48 @@ hr {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    /* justify-content: space-between; */
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.list-property-icon {
-    margin-right: 3px;
-    color: var(--primary-color);
-    font-size: 18px;
-}
+    .list-property-icon {
+        margin-right: 3px;
+        color: var(--primary-color);
+        font-size: 18px;
+    }
 
-.list-property-text {
-    font-size: 12px;
-    color: #383838;
-    /* font-weight: bold; */
-    margin: 0;
-}
+    .list-property-text {
+        font-size: 12px;
+        color: #383838;
+        /* font-weight: bold; */
+        margin: 0;
+    }
 
-.list-property/*, .car-chips*/ {
-    display: flex;
-    align-items: center;
-    margin-right: 12px;
-}
+    .list-property/*, .car-chips*/ {
+        display: flex;
+        align-items: center;
+        margin-right: 12px;
+    }
 
-.list-property:last-of-type {
-    margin-right: unset;
-}
+    .list-property:last-child {
+        margin-right: unset;
+    }
+
+    button.list-property {
+        background-color: var(--primary-color);
+        border: none;
+        border-radius: 5px;
+        color: var(--neutral-color);
+        font-weight: bold;
+        height: 100%;
+        font-size: 12px;
+        padding: 5px;
+    }
+    
+            button.list-property:hover {
+                background-color: #0052cc;
+                cursor: pointer;
+            }
 
 .car {
     background-color: white;
@@ -217,13 +237,13 @@ header {
 }
 
 header #logo-div {
-    flex-grow: 1;
+    /* flex-grow: 1; */
     width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin: auto;
+    /* justify-content: center; */
+    margin: auto 15px;
     border-bottom: 1px solid var(--border-color);
     text-decoration: none;
     color: var(--text-color);
@@ -242,6 +262,19 @@ header #top-bar-logo-text {
 
 header #top-bar-location {
     font-size: 24px;
+}
+
+header #reservation-div {
+    margin-right: 15px;
+    padding: 10px 0;
+}
+
+header #reservation-button {
+    height: 100%;
+    padding: 0 10px;
+    font-size: 18px;
+    font-weight: bold;
+    /* background-color: var(--primary-color); */
 }
 
 /* Hamburger button */
@@ -270,6 +303,7 @@ header #top-bar-location {
 
 /* Side navigation bar */
 .sidenav {
+    /* visibility: hidden; */
     height: 100%;
     width: 60px;
     position: fixed;
@@ -282,7 +316,7 @@ header #top-bar-location {
     overflow-x: hidden;
     /* transition: 0.5s; */
     /* padding-top: 60px; */
-    padding-right: 5px;
+    /* padding-right: 5px; */
 }
 
 #main {
@@ -558,6 +592,23 @@ header #top-bar-location {
         grid-template-columns: repeat(7, 1fr);
     }
 
+    .big-button {
+        background-color: var(--secondary-color);
+        border: none;
+        color: var(--neutral-color);
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+        .big-button:hover {
+            cursor: pointer;
+            background-color: var(--text-color);
+        }
+
 
 .chip {
     display: inline-block;
@@ -569,13 +620,13 @@ header #top-bar-location {
     font-weight: bold;
 }
 
-    .available {
+    .chip.available {
         background-color: #d6ffd6;
         color: darkgreen;
         border: 1px solid #b6dab6;
     }
 
-    .unavailable {
+    .chip.unavailable {
         background-color: #ffd6d6;
         color: darkred;
         border: 1px solid #dab6b6;
