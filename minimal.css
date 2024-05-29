@@ -1,0 +1,222 @@
+/* Material Icons */
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    src: url(./fonts/MaterialSymbolsOutlined.woff2) format('woff');
+}
+
+* {
+    transition: background-color 0.3s;
+}
+
+.material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+/* Variables */
+:root {
+    --primary-color: #007DFC;
+    --secondary-color: #383838;
+    --background-color: whitesmoke;
+    --text-color: #000;
+    --hover-color: rgba(0, 0, 0, 0.05);
+    --available-color: #d6ffd6;
+    --unavailable-color: #ffd6d6;
+    --neutral-color: #fff;
+    --border-color: #d6d8da;
+}
+
+/* Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid var(--border-color);
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        background-color: rgba(0, 0, 0, 0.85);
+        color: #fff;
+        text-align: center;
+        padding: 5px 10px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        white-space: nowrap;
+        width: auto;
+        /* max-width: 100%; */
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+
+.container {
+    display: flex;
+    margin: 0;
+}
+
+/* Header */
+header {
+    background-color: var(--neutral-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    margin-left: 0;
+    z-index: 1;
+    border-bottom: 1px solid var(--border-color);
+}
+
+header #logo-div {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto 15px;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+header #top-bar-logo {
+    font-size: 300%;
+    font-weight: bold;
+}
+
+header #top-bar-logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+header #top-bar-location {
+    font-size: 24px;
+}
+
+header #reservation-div {
+    margin-right: 15px;
+    padding: 10px 0;
+}
+
+header #reset-button {
+    height: 100%;
+    padding: 0 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: red;
+    color: var(--neutral-color);
+}
+
+header #reset-button:hover {
+    cursor: pointer;
+    background-color: darkred;
+}
+
+
+/* Rest */
+.true span {
+    color: black;
+}
+
+.false span {
+    color: lightgray;
+}
+
+.big-button {
+    background-color: var(--primary-color);
+    border: none;
+    color: var(--neutral-color);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+    .big-button.available:hover {
+        cursor: pointer;
+        background-color: var(--text-color);
+    }
+
+
+.chip {
+    display: inline-block;
+    padding: 5px 10px;
+    margin: 0 5px 5px 0;
+    border-radius: 20px;
+    font-size: 12px;
+    width: auto;
+    font-weight: bold;
+}
+
+    .chip.available {
+        background-color: #d6ffd6;
+        color: darkgreen;
+        border: 1px solid #b6dab6;
+    }
+
+    .chip.unavailable {
+        background-color: #ffd6d6;
+        color: darkred;
+        border: 1px solid #dab6b6;
+    }
+
+    .chip-premium {
+        background-color: #ffec83;
+        color: #4d3d00;
+        border: 1px solid #d6d6b6;
+    }
+
+    .chip-ev {
+        background-color: #b3e0ff;
+        color: #004d66;
+        border: 1px solid #b6d6da;
+
+    }
+
+    .chip-neutral {
+        background-color: white;
+        color: black;
+        border: 1px solid #b6b8ba;
+    }
+
+.rentnow.unavailable {
+    background-color: var(--border-color);
+    color: var(--secondary-color);
+    cursor: not-allowed;
+}

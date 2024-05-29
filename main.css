@@ -120,7 +120,7 @@ hr {
     display: grid;
     /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
     /* grid-template-columns: 1fr; */
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(350px, 100%), 1fr));
     justify-content: start;
     gap: 15px;
     margin: 15px 0;
@@ -235,6 +235,7 @@ header {
     margin-left: 60;
     margin-left: 0;
     z-index: 1;
+    border-bottom: 1px solid var(--border-color);
 }
 
 header #logo-div {
@@ -245,7 +246,6 @@ header #logo-div {
     align-items: center;
     /* justify-content: center; */
     margin: auto 15px;
-    border-bottom: 1px solid var(--border-color);
     text-decoration: none;
     color: var(--text-color);
 }
@@ -275,7 +275,12 @@ header #reservation-button {
     padding: 0 12px;
     font-size: 16px;
     font-weight: bold;
-    /* background-color: var(--primary-color); */
+    background-color: var(--primary-color);
+}
+
+header #reservation-button:hover {
+    cursor: pointer;
+    background-color: #0052cc;
 }
 
 /* Hamburger button */
