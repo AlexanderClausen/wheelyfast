@@ -25,7 +25,12 @@ include 'functions.php';
             <span id="top-bar-location">Sydney</span>
         </div>
         <div id="reservation-div">
-            <button id="reservation-button" class="big-button">Reservation</button>
+            <?php
+            if (!empty($_SESSION)) {
+                // echo '<button id="reservation-button" class="big-button">Finish reservation</button>';
+                echo '<form style="height: 100%;" action="reservation.php" method="get"><button id="reservation-button" class="big-button">Finish reservation</button></form>';
+            }
+            ?>
         </div>
     </header>
     <nav id="sidenav" class="sidenav">
@@ -39,5 +44,7 @@ include 'functions.php';
             </div>
         </section>
     </main>
+    <div id="modal">
+    </div>
     <script src="main.js"></script>
 </body>
