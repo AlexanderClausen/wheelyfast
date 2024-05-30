@@ -110,7 +110,8 @@ hr {
 
 #car-list {
     flex: 1;
-    min-width: 30%;
+    min-width: 350px;
+    /* min-width: 30%; */
     /* max-width: 50%; */
     background-color: whitesmoke;
     padding: 15px;
@@ -453,8 +454,9 @@ header #reservation-button:hover {
 
 #car-details {
     flex: 2;
-    min-width: 50%;
-    max-width: 70%;
+    /* min-width: 50%;
+    max-width: 70%; */
+    max-width: 1200px;
     margin: 0 10px;
     padding: 15px;
     /* font-size: 18px; */

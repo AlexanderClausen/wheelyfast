@@ -57,9 +57,9 @@ if ($_GET['id'] == '') {
                         echo '<button type="submit" class="big-button rentnow available">Rent now</button>';
                     echo '</form>';
                 }
-                // echo '<p>' . implode(", ", checkCarAvailability($_GET['id'], $_GET['start_date'], $_GET['end_date'], 'all')) . '</p>';
-                // echo '<p>' . checkCarAvailability($_GET['id'], $_GET['start_date'], $_GET['end_date'], 'lowest') . '</p>';
-                // echo '<p>' . ($car->booked ? 'Car is booked' : 'Car is available') . '</p>';
+                echo '<p>' . implode(", ", checkCarAvailability($_GET['id'], $_GET['start_date'], $_GET['end_date'], 'all')) . '</p>';
+                echo '<p>' . checkCarAvailability($_GET['id'], $_GET['start_date'], $_GET['end_date'], 'lowest') . '</p>';
+                echo '<p>' . ($car->booked ? 'Car is booked' : 'Car is available') . '</p>';
                 echo '<div class="container-spacebetween">';
                     echo '<span class="feature ' . ($car->features->aircon ? 'true' : 'false') . ' tooltip" id="car-aircon"><span class="material-symbols-outlined">mode_fan</span><span class="tooltiptext">A/C: ' . ($car->features->aircon ? '&check;' : '&cross;') . '</span></span>';
                     echo '<span class="feature ' . ($car->features->bluetooth ? 'true' : 'false') . ' tooltip" id="car-bluetooth"><span class="material-symbols-outlined">bluetooth</span><span class="tooltiptext">Bluetooth: ' . ($car->features->bluetooth ? '&check;' : '&cross;') . '</span></span>';

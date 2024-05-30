@@ -33,7 +33,7 @@ if ($exclude_unavailable) {
 }
 
 if ($premium_filter != 'all') {
-    echo '<p class="results-factor">&#8594; Showing ' . ($premium_filter == 'premium' ? 'premium' : 'non-premium') . ' cars only</p>';
+    echo '<p class="results-factor">&#8594; Showing ' . ($premium_filter == 'only' ? 'premium' : 'non-premium') . ' cars only</p>';
 }
 
 // // DEBUG: Output raw car list

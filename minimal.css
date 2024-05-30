@@ -43,8 +43,8 @@ body {
     margin: 0;
 }
 
-h1 {
-    margin: 10px 0;
+h2 {
+    margin-top: 0;
 }
 
 .uppercase {
@@ -157,20 +157,24 @@ header #reset-button:hover {
 }
 
 .big-button {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     border: none;
     color: var(--neutral-color);
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
     border-radius: 10px;
     font-size: 20px;
     font-weight: bold;
 }
 
-    .big-button.available:hover {
+    .big-button:hover {
         cursor: pointer;
         background-color: var(--text-color);
+    }
+
+    .flex .big-button {
+        height: 100%;
     }
 
 
@@ -220,3 +224,95 @@ header #reset-button:hover {
     color: var(--secondary-color);
     cursor: not-allowed;
 }
+
+main {
+    display: flex;
+}
+
+#reservation-overview, #reservation-details {
+    /* flex-grow: 1; */
+    flex: 1;
+    /* width: 50%; */
+}
+
+#customer-data, #car-details, #price-info {
+    margin: 20px;
+}
+
+#car-details, #price-info {
+    padding: 20px;
+    max-width: 600px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+}
+
+#car-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+form input {
+    margin-bottom: 15px;
+}
+
+.warning {
+    background-color: var(--unavailable-color);
+    max-width: 100%;
+    margin: 10px;
+    padding: 15px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+form input, form select {
+    width: 100%;
+    flex-grow: 1;
+    height: 35px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+form input {
+    font-size: large;
+}
+
+form label {
+    font-size: small;
+}
+
+form input:focus, form input:focus-visible, form select:focus, form select:focus-visible {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+
+form .flex {
+    display: flex;
+    gap: 20px;
+}
+
+form .flex div {
+    width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+    td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    td:nth-child(2) {
+        text-align: right;
+    }
+
+    tr:last-child {
+        background-color: #f2f2f2;
+        font-weight: bold;
+    }

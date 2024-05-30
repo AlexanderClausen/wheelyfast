@@ -186,4 +186,20 @@ $(document).ready(function() {
     $('#reservation-button').on('click', function() {
         document.documentElement.style.setProperty('--nav-width', '0');
     });
+
+    // Reservation form
+    // $('#reservation-overview #start-date, #reservation-overview #end-date, #reservation-overview #number').change(function() {
+    //     var startDate = $('#reservation-overview #start-date').val();
+    //     var endDate = $('#reservation-overview #end-date').val();
+    //     var number = $('#reservation-overview #number').val();
+    //     var carId = $('#reservation-overview #car-id').val();
+    //     $.ajax({
+    //         type: 'GET',
+    //         url: 'reservation.php',
+    //         data: { id: carId, start_date: startDate, end_date: endDate, number: number },
+    //         success: function(data) {
+    //             $('body').html(data);
+    //         }
+    //     });
+    // });
 });
