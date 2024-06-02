@@ -19,7 +19,6 @@ include 'functions.php';
 <body>
     <header id="header">
         <a style="text-decoration: none" href="./"><div id="logo-div">
-            <!-- <a id="top-bar-logo" class="logo" href="./">WheelyFast</a> -->
             <span id="top-bar-logo" class="material-symbols-outlined">speed</span>
             <span id="top-bar-logo-text">WheelyFast</span>
             <span id="top-bar-location">Sydney</span>

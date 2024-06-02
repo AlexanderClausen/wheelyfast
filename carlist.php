@@ -84,7 +84,6 @@ echo '<div id="car-grid">';
             echo '<div>';
                 echo '<hr>';
                 echo '<div class="list-properties">';
-                    // echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">directions_car</span><p class="list-property-text">' . $car->type . '</p></div>';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">auto_transmission</span><p class="list-property-text">' . $car->transmission . '</p></div>';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">local_gas_station</span><p class="list-property-text">' . $car->fuel . '</p></div>';
                     echo '<div class="list-property"><span class="material-symbols-outlined list-property-icon">group</span><p class="list-property-text">' . $car->seats . '</p></div>';

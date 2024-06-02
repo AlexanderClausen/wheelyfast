@@ -381,15 +381,6 @@ form .flex div {
         transform: scale(1.5);
     }
 
-    /* form input:not([type="checkbox"]), form select {
-        width: 100%;
-        flex-grow: 1;
-        height: 35px;
-        border: 1px solid var(--border-color);
-        border-radius: 5px;
-        transition: box-shadow 0.2s ease-in-out;
-    } */
-
 table {
     width: 100%;
     border-collapse: collapse;

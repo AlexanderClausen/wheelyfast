@@ -1,13 +1,4 @@
 <?php
-
-// // DEBUG: GET parameters
-// echo '<details>';
-// echo '<summary>GET parameters</summary>';
-// echo '<pre>';
-// print_r($_GET);
-// echo '</pre>';
-// echo '</details>';
-
 if ($_GET['id'] == '') {
     echo '<p>No car selected</p>';
 } else {
@@ -32,9 +23,7 @@ if ($_GET['id'] == '') {
                 }
             echo '</div>';
         echo '</div>';
-        // echo '<p class="chip ' . ($car->booked ? 'unavailable' : 'available') .'" id="car-availability">' . ($car->booked ? 'Booked' : 'Available') . '</p>';
         echo '<p id="car-type" class="smalltext">' . $car->class . ' car | ' . $car->type . '</p>';
-        // echo '<p id="car-name" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
         echo '<div class="container-spacebetween">';
             echo '<p id="car-model" class="bigtext">' . $car->name . ' (' . $car->year . ')</p>';
             echo '<div id="car-price" class="right-align" style="margin-left: 10px;">';
@@ -90,8 +79,5 @@ if ($_GET['id'] == '') {
             echo '</div>';
             echo '<p id="car-description" class="flex">' . $car->description . '</p>';
         echo '</div>';
-
-        // echo '<p id="car-price">$' . number_format($car->price, 2) . '/day</p>';
-        // echo '<button>Book</button>';
     echo '</div>';
 }

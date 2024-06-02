@@ -23,13 +23,6 @@
                     <input type="date" id="end-date" name="end-date" value="<?php echo date('Y-m-d', strtotime('+1 day')); ?>" min="<?php echo date('Y-m-d'); ?>" required>
                 </td>
             </tr>
-            <!-- <tr>
-                <td><span class="material-symbols-outlined nav-icon">visibility</span></td>
-                <td class="selector-item">
-                    <label for="exclude-unavailable" class="smalltext">Hide Booked:</label>
-                    <input type="checkbox" id="exclude-unavailable" name="exclude-unavailable">
-                </td>
-            </tr> -->
             <tr>
                 <td><span class="material-symbols-outlined nav-icon">star</span></td>
                 <td class="selector-item">
