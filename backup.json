@@ -25,8 +25,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -54,11 +53,10 @@
             "androidauto": false,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
-        "confirmed_bookings": 1,
+        "confirmed_bookings": 0,
         "enabled": true,
         "id": 2,
         "premium": true,
@@ -83,8 +81,7 @@
             "androidauto": false,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -104,7 +101,7 @@
         "luggage": 1,
         "quantity": 2,
         "price": 30,
-        "description": "The Suzuki Swift is a compact car that\u2019s big on personality and performance. Perfect for city driving, the Swift is known for its agile handling, fuel efficiency, and stylish design. Its compact size makes it easy to maneuver through tight city streets and find parking in crowded areas. Inside, you'll find a surprisingly spacious and well-designed interior, equipped with modern features for a comfortable ride. Whether you're commuting to work or running errands, the Suzuki Swift provides a fun and economical driving experience without compromising on style or comfort.",
+        "description": "The Suzuki Swift is a compact car that’s big on personality and performance. Perfect for city driving, the Swift is known for its agile handling, fuel efficiency, and stylish design. Its compact size makes it easy to maneuver through tight city streets and find parking in crowded areas. Inside, you'll find a surprisingly spacious and well-designed interior, equipped with modern features for a comfortable ride. Whether you're commuting to work or running errands, the Suzuki Swift provides a fun and economical driving experience without compromising on style or comfort.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -112,8 +109,7 @@
             "androidauto": false,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -141,8 +137,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -170,8 +165,7 @@
             "androidauto": true,
             "gps": false,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -199,8 +193,7 @@
             "androidauto": false,
             "gps": true,
             "parkingassistant": false,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -220,7 +213,7 @@
         "luggage": 3,
         "quantity": 4,
         "price": 50,
-        "description": "The Toyota Corolla is a legendary compact car known for its reliability, efficiency, and value. With a sleek exterior design and a comfortable, well-appointed interior, the Corolla is perfect for everyday driving. Its fuel-efficient engine ensures economical trips, while advanced safety features provide peace of mind for you and your passengers. The Corolla\u2019s user-friendly infotainment system keeps you connected and entertained on the go. Whether you\u2019re commuting to work, running errands, or embarking on a road trip, the Toyota Corolla delivers a smooth and dependable ride, making it a perennial favorite among drivers worldwide.",
+        "description": "The Toyota Corolla is a legendary compact car known for its reliability, efficiency, and value. With a sleek exterior design and a comfortable, well-appointed interior, the Corolla is perfect for everyday driving. Its fuel-efficient engine ensures economical trips, while advanced safety features provide peace of mind for you and your passengers. The Corolla’s user-friendly infotainment system keeps you connected and entertained on the go. Whether you’re commuting to work, running errands, or embarking on a road trip, the Toyota Corolla delivers a smooth and dependable ride, making it a perennial favorite among drivers worldwide.",
         "features": {
             "aircon": true,
             "bluetooth": true,
@@ -228,8 +221,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -257,8 +249,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -286,8 +277,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -315,8 +305,7 @@
             "androidauto": false,
             "gps": true,
             "parkingassistant": false,
-            "cruisecontrol": false
-        }
+            "cruisecontrol": false}
     },
     {
         "confirmed_bookings": 0,
@@ -344,8 +333,7 @@
             "androidauto": false,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -373,8 +361,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -402,8 +389,7 @@
             "androidauto": true,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -431,8 +417,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -460,8 +445,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -489,8 +473,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -498,7 +481,7 @@
         "id": 17,
         "premium": true,
         "class": "Large",
-        "type": "Commercial",
+        "type":"Commercial",
         "make": "RAM",
         "model": "Heavy Duty 3500",
         "year": 2024,
@@ -518,8 +501,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -547,8 +529,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -556,7 +537,7 @@
         "id": 19,
         "premium": true,
         "class": "Large",
-        "type": "SUV",
+        "type":"SUV",
         "make": "Mercedes-Benz",
         "model": "AMG G63",
         "year": 2024,
@@ -576,8 +557,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -605,8 +585,7 @@
             "androidauto": true,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -634,8 +613,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -663,8 +641,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -672,7 +649,7 @@
         "id": 23,
         "premium": true,
         "class": "Small",
-        "type": "Coup\u00e9",
+        "type": "Coupé",
         "make": "Ford",
         "model": "Mustang",
         "year": 1970,
@@ -692,8 +669,7 @@
             "androidauto": false,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": false
-        }
+            "cruisecontrol": false}
     },
     {
         "confirmed_bookings": 0,
@@ -721,8 +697,7 @@
             "androidauto": true,
             "gps": false,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -750,8 +725,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -779,8 +753,7 @@
             "androidauto": false,
             "gps": false,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -788,7 +761,7 @@
         "id": 27,
         "premium": false,
         "class": "Medium",
-        "type": "Coup\u00e9",
+        "type": "Coupé",
         "make": "Mercedes-Benz",
         "model": "CLA",
         "year": 2024,
@@ -808,8 +781,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -837,8 +809,7 @@
             "androidauto": true,
             "gps": true,
             "parkingassistant": true,
-            "cruisecontrol": true
-        }
+            "cruisecontrol": true}
     },
     {
         "confirmed_bookings": 0,
@@ -846,7 +817,7 @@
         "id": 29,
         "premium": true,
         "class": "Small",
-        "type": "Coup\u00e9",
+        "type": "Coupé",
         "make": "Porsche",
         "model": "911",
         "year": 1966,
@@ -866,7 +837,6 @@
             "androidauto": false,
             "gps": false,
             "parkingassistant": false,
-            "cruisecontrol": false
-        }
+            "cruisecontrol": false}
     }
 ]

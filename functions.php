@@ -83,7 +83,7 @@
     //     return $result->num_rows > 0;
     // }
 
-    function getCarDetailsMin($id, $start_date, $end_date) {
+    function getCarDetailsMin($id) {
         $cars = json_decode(file_get_contents('cars.json'));
 
         foreach ($cars as $car) {
@@ -99,7 +99,7 @@
 
     function checkCarAvailability($id, $start_date, $end_date, $output = 'lowest') {
         global $conn;
-        $car = getCarDetailsMin($id, $start_date, $end_date);
+        $car = getCarDetailsMin($id);
         $totalQuantity = $car->quantity;
 
         $sql = "
@@ -131,7 +131,7 @@
     }
 
     function getCarDetails($id, $start_date, $end_date) {
-        $car = getCarDetailsMin($id, $start_date, $end_date);
+        $car = getCarDetailsMin($id);
         $car->booked = checkCarAvailability($id, $start_date, $end_date, 'lowest') == 0;
         return $car;
     }
@@ -152,5 +152,52 @@
         // Display the unique classes in the navigation menu
         foreach ($values as $value) {
             echo '<li class="nav-link sub-item" data-key="' . $key . '"><span class="nav-text">' . $value . '</span></li>';
+        }
+    }
+
+    function saveBooking($id, $start_date, $end_date, $name, $email, $phone, $price, $number) {
+        global $conn;
+        $verification_code = bin2hex(random_bytes(8));
+        $sql = "INSERT INTO orders (car_id, code, status, name, phone, email, licence, start_date, end_date, price_day, quantity) VALUES ($id, '$verification_code', 'unconfirmed', '$name', '$phone', '$email', 1, '$start_date', '$end_date', $price, $number)";
+        $conn->query($sql);
+        $order_id = $conn->insert_id;
+        return array('order_id' => $order_id, 'code' => $verification_code);
+    }
+
+    function clearSession() {
+        session_start();
+        session_unset();
+        session_destroy();
+    }
+
+    function getConfirmation ($id, $code) {
+        global $conn;
+        $sql = "SELECT * FROM orders WHERE order_id = $id AND code = '$code'";
+        $result = $conn->query($sql);
+        if ($result->num_rows > 0) {
+            return $result->fetch_assoc();
+        } else {
+            return null;
+        }
+    }
+
+    function changeBookingStatus ($id, $code, $newstatus) {
+        global $conn;
+        $sql = "UPDATE orders SET status = '$newstatus' WHERE order_id = $id AND code = '$code'";
+        $conn->query($sql);
+
+        // cars.json update number of confirmed_bookings
+        $car_id = getConfirmation($id, $code)['car_id'];
+        
+        if ($newstatus == 'confirmed') {
+            $carsData = file_get_contents('cars.json');
+            $cars = json_decode($carsData, true);
+            foreach ($cars as $key => $car) {
+                if ($car['id'] == $car_id) {
+                    $cars[$key]['confirmed_bookings'] += 1;
+                    break;
+                }
+            }
+            file_put_contents('cars.json', json_encode($cars, JSON_PRETTY_PRINT));
         }
     }

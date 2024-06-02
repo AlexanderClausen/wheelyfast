@@ -5,8 +5,9 @@ if(isset($_GET['id'])) { $_SESSION['id'] = $_GET['id']; }
 if(isset($_GET['start_date'])) { $_SESSION['start_date'] = $_GET['start_date']; }
 if(isset($_GET['end_date'])) { $_SESSION['end_date'] = $_GET['end_date']; }
 if(isset($_GET['number'])) { $_SESSION['number'] = $_GET['number']; } else { $_SESSION['number'] = 1; }
+if(isset($_GET['error'])) { $error = $_GET['error']; } else { $error = ''; }
 
-if (empty($_SESSION)) {
+if (empty($_SESSION) || !isset($_SESSION['id']) || !isset($_SESSION['start_date']) || !isset($_SESSION['end_date'])) {
     header("Location: index.php");
     exit();
 } else {
@@ -32,22 +33,23 @@ if (empty($_SESSION)) {
 </head>
 <body>
     <header id="header">
-        <div id="logo-div">
+        <a style="text-decoration: none" href="./"><div id="logo-div">
             <span id="top-bar-logo" class="material-symbols-outlined">speed</span>
             <span id="top-bar-logo-text">WheelyFast</span>
             <span id="top-bar-location">Sydney</span>
-        </div>
+        </div></a>
         <div id="reservation-div">
             <?php
             if (!empty($_SESSION)) {
-                echo '<form style="height: 100%;" action="reset.php" method="psot"><button id="reset-button" class="big-button">Cancel reservation</button></form>';
+                echo '<form style="height: 100%;" action="reset.php" method="post"><button id="reset-button" class="big-button">Cancel reservation</button></form>';
             }
             ?>
         </div>
     </header>
     <main>
-        <div id="reservation-overview">
-            <div id="car-details">
+        <div id="left-column">
+        <?php if ($error === 'notavailable') { echo '<div id="notavailable" class="warning">The car is not available on your selected dates. Please check the dates and available quantity and try again.</div>'; } ?>
+            <div id="reservation-input" class="rounded-block">
                 <h2><?php echo $car->make . ' ' . $car->model . ' (' . $car->year . ')'; ?></h2>
                 <img id="car-img" src="./images/<?php echo $car->image; ?>" alt="<?php echo $car->make . ' ' . $car->model; ?>">
                 <form action="reservation.php" method="get">
@@ -55,31 +57,32 @@ if (empty($_SESSION)) {
 
                     <p <?php if($available !== 0) { echo 'style="display: none;"'; } ?>>Sorry, there are no cars available on these dates. Please choose different dates or select a different vehicle.</p>
 
-                    <div id="dates">
-                        <div>
-                            <label for="start_date">Start date</label>
-                            <input type="date" id="start-date" name="start_date" value="<?php echo $_SESSION['start_date']; ?>" min="<?php echo date('Y-m-d'); ?>" required>
-                        </div>
-                        <div>
-                            <label for="end_date">End date</label>
-                            <input type="date" id="end-date" name="end_date" value="<?php echo $_SESSION['end_date']; ?>" min="<?php echo date('Y-m-d'); ?>" required>
-                        </div>
+                    <div>
+                        <label for="start_date">Start date</label>
+                        <input type="date" id="start-date" name="start_date" value="<?php echo $_SESSION['start_date']; ?>" min="<?php echo date('Y-m-d'); ?>" required>
+                    </div>
+                    <div>
+                        <label for="end_date">End date</label>
+                        <input type="date" id="end-date" name="end_date" value="<?php echo $_SESSION['end_date']; ?>" min="<?php echo date('Y-m-d'); ?>" required>
                     </div>
 
-                    <div id="calc" <?php if($available === 0) { echo 'style="display: none;"'; } ?>>
-                        <div>
-                            <label for="number">Number of cars (available: <?php echo $available ?>)</label>
-                            <input type="number" id="number" name="number" value="<?php echo ($available === 0) ? '0' : '1'; ?>" min="<?php echo ($available === 0) ? '0' : '1'; ?>" max="<?php echo $available; ?>" required>
-                        </div>
-                        <div>
-                            <button type="submit" class="big-button"><?php echo ($available === 0) ? 'Check availability' : 'Confirm'; ?></button>
-                        </div>
+                    <div <?php if($available === 0) { echo 'style="display: none;"'; } ?>>
+                        <label for="number">Number of cars (available: <?php echo $available ?>)</label>
+                        <input type="number" id="number" name="number" value="<?php echo ($available === 0) ? '0' : '1'; ?>" min="<?php echo ($available === 0) ? '0' : '1'; ?>" max="<?php echo $available; ?>" required>
                     </div>
+                    <button id="update-button" type="submit" class="big-button" <?php if($available === 0) { echo 'style="display: none;"'; } ?>><?php echo ($available === 0) ? 'Check availability' : 'Update'; ?></button>
                 </form>
             </div>
-            <div id="price-info" <?php if($available === 0) { echo 'style="display: none;"'; } ?>>
+        </div>
+
+        <div id="right-column">
+            <div id="reservation-bookinginfo" class="rounded-block" <?php if($available === 0) { echo 'style="display: none;"'; } ?>>
+                <h2>Booking information</h2>
+                <div>
+                    <p>You are booking a <strong><?php echo $car->make . ' ' . $car->model . ' (' . $car->year . ')'; ?></strong> from <?php echo $_SESSION['start_date'] . ' to ' . $_SESSION['end_date'] . ' (' . $number_days . ' days).'; ?></p>
+                </div>
                 <div id="changewarning" class="warning" style="display: none;">
-                    <span>Click the <strong>Confirm</strong> button to check availability and show updated prices.</span>
+                    <span>Click the <strong>Update</strong> button to check availability and show updated information.</span>
                 </div>
                 <table>
                     <tr>
@@ -88,11 +91,11 @@ if (empty($_SESSION)) {
                     </tr>
                     <tr>
                         <td>Rental period</td>
-                        <td id="days"><?php echo $number_days; ?> days</td>
+                        <td id="days"><?php echo $number_days; ?> day(s)</td>
                     </tr>
                     <tr>
                         <td>Rental objects</td>
-                        <td id="cars"><?php echo $_SESSION['number']; ?> vehicles</td>
+                        <td id="cars"><?php echo $_SESSION['number']; ?> vehicle(s)</td>
                     </tr>
                     <tr>
                         <td>Total price</td>
@@ -100,26 +103,32 @@ if (empty($_SESSION)) {
                     </tr>
                 </table>
             </div>
-        </div>
-        <div id="reservation-details">
-            <div>
-                <form id="customer-data">
+            <div id="customer-details" class="rounded-block">
+                <form id="reservation-form" action="submit.php" method="post">
+                    <h2>Customer details</h2>
+                    <p>Please fill in your details below. The red asterisk indicates a required field.</p>
                     <div>
-                        <label for="name">Name</label>
+                        <label class="required" for="name">Name</label>
                         <input type="text" id="name" name="name" required>
                     </div>
                     <div>
-                        <label for="phone">Phone number</label>
+                        <label class="required" for="phone">Phone number</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
                     <div>
-                        <label for="email">Email</label>
+                        <label class="required" for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
-                    <div>
-                        <label for="licence">Do you have a valid driver licence?</label>
+                    <div id="licence-check">
                         <input type="checkbox" id="licence" name="licence" required>
+                        <label class="required" for="licence">I confirm that I hold a valid driver licence.</label>
                     </div>
+                    <input type="hidden" name="id" value="<?php echo $car->id; ?>">
+                    <input type="hidden" name="start_date" value="<?php echo $_SESSION['start_date']; ?>">
+                    <input type="hidden" name="end_date" value="<?php echo $_SESSION['end_date']; ?>">
+                    <input type="hidden" name="number" value="<?php echo $_SESSION['number']; ?>">
+                    <input type="hidden" name="price" value="<?php echo $car->price; ?>">
+                    <button type="submit" id="reserve-button" class="big-button active">Reserve</button>
                 </form>
             </div>
     </main>

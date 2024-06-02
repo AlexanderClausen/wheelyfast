@@ -18,16 +18,15 @@ include 'functions.php';
 </head>
 <body>
     <header id="header">
-        <div id="logo-div">
+        <a style="text-decoration: none" href="./"><div id="logo-div">
             <!-- <a id="top-bar-logo" class="logo" href="./">WheelyFast</a> -->
             <span id="top-bar-logo" class="material-symbols-outlined">speed</span>
             <span id="top-bar-logo-text">WheelyFast</span>
             <span id="top-bar-location">Sydney</span>
-        </div>
+        </div></a>
         <div id="reservation-div">
             <?php
             if (!empty($_SESSION)) {
-                // echo '<button id="reservation-button" class="big-button">Finish reservation</button>';
                 echo '<form style="height: 100%;" action="reservation.php" method="get"><button id="reservation-button" class="big-button">Finish reservation</button></form>';
             }
             ?>
