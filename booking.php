@@ -118,7 +118,7 @@ if (isset($_GET['id'], $_GET['code'])) {
                 } elseif ($status == 'returned') {
                     echo '<button class="big-button" onclick="window.location.href=\'index.php\'">Start a new booking</button>';
                 } elseif ($status == 'confirmed') {
-                    echo '<button class="big-button active" onclick="window.location.href=\'status.php?id=' . $id . '&code=' . $code . '&newstatus=cancelled\'">Cancel booking</button>';
+                    echo '<button class="big-button red" onclick="window.location.href=\'status.php?id=' . $id . '&code=' . $code . '&newstatus=cancelled\'">Cancel booking</button>';
                 } elseif ($status == 'unconfirmed') {
                     echo '<button class="big-button active" style="margin-bottom: 10px;" onclick="window.location.href=\'status.php?id=' . $id . '&code=' . $code . '&newstatus=confirmed\'">Confirm booking</button>';
                     echo '<button class="big-button red" onclick="window.location.href=\'status.php?id=' . $id . '&code=' . $code . '&newstatus=cancelled\'">Cancel booking</button>';
