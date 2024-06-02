@@ -58,7 +58,7 @@
         }
     },
     {
-        "confirmed_bookings": 1,
+        "confirmed_bookings": 0,
         "enabled": true,
         "id": 2,
         "premium": true,
