@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    var recentSearches = JSON.parse(localStorage.getItem('recentSearches')) ||[];
+
     // Navigation menu
     $('.nav-link').on('click', function() {
         event.stopPropagation(); // Prevents closing of sub-menu
@@ -27,6 +29,15 @@ $(document).ready(function() {
     // Function to load car list
     function loadCarList() {
         var formData = $('#selector').serialize();
+        var searchString = $('#search-bar').val();
+
+        if (searchString !== '') {
+            recentSearches.push(searchString);
+            recentSearches = [...new Set(recentSearches)];
+            recentSearches = recentSearches.slice(-5);
+        }
+        localStorage.setItem('recentSearches', JSON.stringify(recentSearches));
+
         $.ajax({
             type: 'GET',
             url: 'carlist.php',
@@ -142,6 +153,16 @@ $(document).ready(function() {
         }
     });
 
+    // Autocomplete from recent searches when focused and empty
+    $('#search-bar').focus(function() {
+        if ($(this).val() === '') {
+            $(this).autocomplete({
+                source: recentSearches,
+                minLength: 0
+            }).autocomplete('search', "");
+        }
+    });
+
     // Autocomplete search bar
     $(function() {
         $.ajax({
@@ -150,7 +171,26 @@ $(document).ready(function() {
             success: function(data) {
                 var autocompleteData = Object.values(JSON.parse(data))
                 $("#search-bar").autocomplete({
-                    source: autocompleteData
+                    source: autocompleteData,
+                    minLength: 1
+                });
+
+                // Autocomplete from suggestions when focused and not empty
+                $('#search-bar').focus(function() {
+                    if ($(this).val() !== '') {
+                        $(this).autocomplete({
+                            source: autocompleteData,
+                            minLength: 1
+                        }).autocomplete("search", $(this).val());
+                    }
+                });
+
+                // Update autocomplete source when typing
+                $('#search-bar').on('input', function() {
+                    $(this).autocomplete({
+                        source: autocompleteData,
+                        minLength: 0
+                    });
                 });
             },
             error: function(jqXHR, textStatus, errorThrown) {
