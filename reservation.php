@@ -68,7 +68,7 @@ if (empty($_SESSION) || !isset($_SESSION['id']) || !isset($_SESSION['start_date'
 
                     <div <?php if($available === 0) { echo 'style="display: none;"'; } ?>>
                         <label for="number">Number of cars (available: <?php echo $available ?>)</label>
-                        <input type="number" id="number" name="number" value="<?php echo ($available === 0) ? '0' : '1'; ?>" min="<?php echo ($available === 0) ? '0' : '1'; ?>" max="<?php echo $available; ?>" required>
+                        <input type="number" id="number" name="number" value="<?php echo ($available === 0) ? '0' : $_SESSION['number']; ?>" min="<?php echo ($available === 0) ? '0' : '1'; ?>" max="<?php echo $available; ?>" required>
                     </div>
                     <button id="update-button" type="submit" class="big-button" <?php if($available === 0) { echo 'style="display: none;"'; } ?>><?php echo ($available === 0) ? 'Check availability' : 'Update'; ?></button>
                 </form>
